@@ -1,0 +1,23 @@
+﻿@using Fanex.Result.ThirdParty.Models.Views;
+
+@model ThirdPartyResultViewModel
+@{
+    ViewBag.Title = Resources.Bullfighting;
+}
+
+<div role="tabpanel" class="tab-pane active" id="bullfighting">
+    <div class="filter">
+        <div class="col-sm-12">
+            <a href="#" id="result-link" class="lnk" target="_blank">@Resources.OpenBullfightingResults</a>
+            @Html.Hidden("resultPageUrl", Model.Result.Value)
+        </div>
+        <div class="col-sm-12">
+            <span class="txt-red">*</span> @Resources.NoteForBullfighting
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    @Scripts.Render(BundleConfig.BullfightingResultJavascriptBundleUrl)
+}

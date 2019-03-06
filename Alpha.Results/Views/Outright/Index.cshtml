@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "Outright";
+}
+
+@section ComponentStyles
+{
+    <link href="/contents/components/datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+}
+
+@model OutrightResultViewModel
+
+@section styles
+{
+    <link href="/contents/components/select2/css/select2.min.css" rel="stylesheet" />
+}
+
+<div role="tabpanel" class="tab-pane active" id="outright">
+    <div class="row filter">
+        @using (Html.BeginForm("Index", "Outright", FormMethod.Get, new { id = "frm-outright" }))
+        {
+            <div class="col-sm-12">
+                <span class="txt">@Resources.From</span>
+                <div class="control date">
+                    <div class="input-group date" id="dpk-fromdate">
+                        @Html.EditorFor(model => model.FromDate, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                        <span class="input-group-addon">
+                            <span class="icon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+                <span class="txt">@Resources.To</span>
+                <div class="control date">
+                    <div class="input-group date" id="dpk-todate">
+                        @Html.EditorFor(model => model.ToDate, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                        <span class="input-group-addon">
+                            <span class="icon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+                <input type="submit" value="@Resources.Submit" class="btn-submit" id="btn-submit" />
+                <input type="submit" value="@Model.Today" class="btn-default btn-other-day" id="btn-today" />
+                <input type="submit" value="@Model.Yesterday" class="btn-default btn-other-day" id="btn-yesterday" />
+            </div>
+            <div class="col-sm-12">
+                <span class="txt-red">*</span> @Model.MinResultDateMessage
+            </div>
+            if (Model.Sports != null && Model.Sports.Any())
+            {
+                <div class="col-sm-12 sport-info">
+                    <span class="txt">@Resources.Sport</span>
+                    <div class="dropdown control">
+                        @Html.DropDownListFor(model => model.SportType, Model.Sports, new { @class = "form-control", @onchange = "this.form.submit()" })
+                    </div>
+
+                    <span class="txt">@Resources.League</span>
+                    <div class="dropdown control league-content">
+                        @Html.DropDownListFor(model => model.LeagueId, Model.Leagues, Resources.ShowAllLeagues, new { @class = "form-control", @onchange = "this.form.submit()" })
+                    </div>
+                    <span class="icon-excel" id="btn-excel"></span>
+                </div>
+            }
+        }
+    </div>
+    <div class="main-content">
+       @Html.Raw(Model.HtmlResults)
+    </div>
+
+    @Html.HiddenFor(model => model.MinResultDate)
+    @Html.HiddenFor(model => model.MaxResultDate)
+</div>
+<iframe src="#" frameborder="0" scrolling="no" id="ifrm-exportExcel" name="ifrm-exportExcel" style="display:none;"></iframe>
+
+@section scripts
+{
+    @Scripts.Render(BundleConfig.OutrightResultJavascriptBundleUrl)
+}

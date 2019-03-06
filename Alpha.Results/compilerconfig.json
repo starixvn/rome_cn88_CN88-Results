@@ -1,0 +1,16 @@
+﻿[
+  {
+    "outputFile": "Content/result.css",
+    "inputFile": "Content/result.scss",
+    "minify": {
+      "enabled": false
+    }
+  },
+  {
+    "outputFile": "Content/ThirdParty/third-party.css",
+    "inputFile": "Content/ThirdParty/third-party.scss",
+    "minify": {
+      "enabled": false
+    }
+  }
+]

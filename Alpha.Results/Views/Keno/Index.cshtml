@@ -1,0 +1,17 @@
+@{
+    ViewBag.Title = Resources.Keno;
+}
+
+@model KenoResultViewModel
+
+<div role="tabpanel" class="tab-pane active" id="keno">
+    <div class="filter">
+        <a href="@(Model.ResultUrl)" id="result-link" class="lnk" target="_blank">@Resources.OpenKenoResults</a>
+        @Html.Hidden("extend-token-url", Model.ExtendTokenUrl)
+    </div>
+</div>
+
+@section scripts
+{
+    @Scripts.Render(BundleConfig.KenoResultStyleBundleUrl)
+}

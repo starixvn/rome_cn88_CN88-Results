@@ -1,0 +1,21 @@
+﻿@model NormalDetailViewModel
+
+@{
+    ViewBag.Title = Model.Title;
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@Html.Raw(ViewBag.Title)</title>
+  
+    @Styles.Render(BundleConfig.ResultCoreStyleBundleUrl)
+</head>
+<body>
+    <div class="detail-result" id="detail-result-body">
+        @Html.Raw(Model.HtmlResults)
+    </div>
+    @Alpha.Web.Helpers.GoogleAnalyticHepler.Render()
+</body>
+</html>

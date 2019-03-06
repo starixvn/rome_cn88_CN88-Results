@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Lucky3Table>
+  <Lucky3>
+    <matchid>23335912</matchid>
+    <leagueid>15223</leagueid>
+    <eventstatus>Completed</eventstatus>
+    <eventdate>2017-10-27</eventdate>
+    <kickofftime>2017-10-27</kickofftime>
+    <matchcode>09230</matchcode>
+    <finalhomescore>69</finalhomescore>
+    <livehomescore>69</livehomescore>
+    <liveawayscore>0</liveawayscore>
+    <seq>1</seq>
+    <number>34</number>
+  </Lucky3>
+  <Lucky3>
+    <matchid>23335912</matchid>
+    <leagueid>15223</leagueid>
+    <eventstatus>Completed</eventstatus>
+    <eventdate>2017-10-27</eventdate>
+    <kickofftime>2017-10-27</kickofftime>
+    <matchcode>09230</matchcode>
+    <finalhomescore>69</finalhomescore>
+    <livehomescore>69</livehomescore>
+    <liveawayscore>0</liveawayscore>
+    <seq>2</seq>
+    <number>23</number>
+  </Lucky3>
+  <Lucky3>
+    <matchid>23335912</matchid>
+    <leagueid>15223</leagueid>
+    <eventstatus>Completed</eventstatus>
+    <eventdate>2017-10-27</eventdate>
+    <kickofftime>2017-10-27</kickofftime>
+    <matchcode>09230</matchcode>
+    <finalhomescore>69</finalhomescore>
+    <livehomescore>69</livehomescore>
+    <liveawayscore>0</liveawayscore>
+    <seq>3</seq>
+    <number>69</number>
+  </Lucky3>
+</Lucky3Table>

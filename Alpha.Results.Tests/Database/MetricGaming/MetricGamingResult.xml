@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MetricGamingTable>
+  <MetricGaming>
+    <Leagueid>48422</Leagueid>
+    <MatchID>23349167</MatchID>
+    <GameID>801</GameID>
+    <Custom1>52:00-53:00</Custom1>
+    <SettlementStatusID>0</SettlementStatusID>
+    <GameResult></GameResult>
+    <OtherInfo></OtherInfo>
+    <HomeId>94</HomeId>
+    <awayid>42</awayid>
+  </MetricGaming>
+</MetricGamingTable>

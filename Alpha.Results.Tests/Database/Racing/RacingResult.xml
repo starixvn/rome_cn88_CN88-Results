@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RacingTable>
+  <Racing>
+    <meetingid>27538</meetingid>
+    <HorseId>226628</HorseId>
+    <HorseNo>3</HorseNo>
+    <IsFavor>F</IsFavor>
+    <IsSCR></IsSCR>
+    <place>1</place>
+    <placeodds>0.00</placeodds>
+    <odds>4.30</odds>
+    <racename>1</racename>
+    <kickofftime>2017-10-27</kickofftime>
+    <rowcount>3</rowcount>
+    <SCR>17,15,16,</SCR>
+    <TF></TF>
+  </Racing>
+  <Racing>
+    <meetingid>27538</meetingid>
+    <HorseId>227039</HorseId>
+    <HorseNo>7</HorseNo>
+    <IsFavor></IsFavor>
+    <IsSCR></IsSCR>
+    <place>2</place>
+    <placeodds>0.00</placeodds>
+    <odds>12.20</odds>
+    <kickofftime>2017-10-27</kickofftime>
+    <rowcount>3</rowcount>
+    <SCR></SCR>
+    <TF></TF>
+  </Racing>
+  <Racing>
+    <meetingid>27538</meetingid>
+    <HorseId>226690</HorseId>
+    <HorseNo>4</HorseNo>
+    <IsFavor></IsFavor>
+    <IsSCR></IsSCR>
+    <place>3</place>
+    <placeodds>0.00</placeodds>
+    <odds>5.40</odds>
+    <kickofftime>2017-10-27</kickofftime>
+    <rowcount>3</rowcount>
+    <TF></TF>
+  </Racing>
+</RacingTable>

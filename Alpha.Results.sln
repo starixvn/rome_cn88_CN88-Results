@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alpha.Results.Site", "Alpha.Results\Alpha.Results.Site.csproj", "{A6792F78-EDF2-4507-8012-94DAA052E4FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alpha.Results.Site.Tests", "Alpha.Results.Tests\Alpha.Results.Site.Tests.csproj", "{231904A0-114B-456C-8F15-32CEF577001D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SonarQube", "SonarQube", "{2807CA14-8FB0-4AD5-99EF-C2D5D85404CD}"
+	ProjectSection(SolutionItems) = preProject
+		SonarQube\Alpha-ResultCSharp.ruleset = SonarQube\Alpha-ResultCSharp.ruleset
+		SonarQube\SolutionBinding.sqconfig = SonarQube\SolutionBinding.sqconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6792F78-EDF2-4507-8012-94DAA052E4FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6792F78-EDF2-4507-8012-94DAA052E4FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6792F78-EDF2-4507-8012-94DAA052E4FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6792F78-EDF2-4507-8012-94DAA052E4FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{231904A0-114B-456C-8F15-32CEF577001D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{231904A0-114B-456C-8F15-32CEF577001D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{231904A0-114B-456C-8F15-32CEF577001D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{231904A0-114B-456C-8F15-32CEF577001D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

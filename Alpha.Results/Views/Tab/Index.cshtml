@@ -1,0 +1,33 @@
+﻿@model TabViewModel
+<li role="presentation" class="@((Model.SelectedTabName == "normal") ? "active" : string.Empty)">
+    @Html.ActionLink(Resources.Normal, "index", "normal", null, new { id = "tabNormal" })
+</li>
+<li role="presentation" class="@((Model.SelectedTabName == "outright") ? "active" : string.Empty)">
+    @Html.ActionLink(Resources.Outright, "index", "outright", null, new { id = "tabOutright" })
+</li>
+@if (Model.IsEnabledKenoTab)
+{
+    <li role="presentation" class="@((Model.SelectedTabName == "keno") ? "active" : string.Empty)">
+        @Html.ActionLink(Resources.Keno, "index", "keno", null, new { id = "tabKeno" })
+    </li>
+}
+
+@if (Model.IsEnableNG2)
+{
+    <li role="presentation" class="@((Model.SelectedTabName == "ng2") ? "active" : string.Empty)">
+        @Html.ActionLink(Model.GetProductName(Alpha.Results.Site.Constants.ProductIdConstants.NG2), "index", "ng2", null, new { id = "tabng2" })
+    </li>
+}
+@if (Model.IsEnableLottery)
+{
+    <li role="presentation" class="@((Model.SelectedTabName == "lottery") ? "active" : string.Empty)">
+        @Html.ActionLink(Model.GetProductName(Alpha.Results.Site.Constants.ProductIdConstants.Lottery), "index", "lottery", null, new { id = "tablottery" })
+    </li>
+}
+
+@*@if (Model.IsEnableBullfighting)
+{
+    <li role="presentation" class="@((Model.SelectedTabName == "bullfighting") ? "active" : string.Empty)">
+        @Html.ActionLink(Model.GetProductName(Alpha.Results.Site.Constants.ProductIdConstants.Bullfighting), "index", "Bullfighting", null, new { id = "tabbullfighting" })
+    </li>
+}*@
