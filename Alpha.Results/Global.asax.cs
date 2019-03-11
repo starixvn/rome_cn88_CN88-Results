@@ -6,6 +6,7 @@
     using System.Web.Optimization;
     using System.Web.Routing;
     using App_Start;
+    using CN88.Features.Site.App_Start;
     using Configurations;
     using Fanex.Logging.Extensions.Database;
     using Fanex.Logging.Extensions.Web;
@@ -25,6 +26,7 @@
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            LoggingManager.Init();
             DependencyConfig.Init();
 
             Fanex.Data.Configuration.DbSettingProviderManager.Current.Start();
