@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>@Html.Raw(ViewBag.Title)</title>
     <link href="" rel="stylesheet" />
+    @Alpha.Web.Helpers.StaticResources.AssetStyles.Render("/bundles/common/common")
     @Alpha.Web.Helpers.StaticResources.AssetStyles.Render("/bundles/site-results/default")
 
     @RenderSection("ComponentStyles", false)
@@ -18,7 +19,7 @@
         <div id="page_main">
             <div class="container-fluid">
                 <div class="">
-                    <ul class="nav nav-tabs" role="tablist">
+                    <ul class="nav nav-tabs-style2" role="tablist">
                         @Html.Action("Index", "Tab", new { tabName = ViewContext.RouteData.Values["controller"], area = "" })
                     </ul>
                     <div class="tab-content">
