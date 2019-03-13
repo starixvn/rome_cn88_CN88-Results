@@ -24,25 +24,29 @@
       width: 130px; }
   .tab-content .btn {
     font-size: 13px; }
-  .tab-content .filter [class^="col-"] {
-    margin-bottom: 15px; }
-  .tab-content .filter .main-option {
-    margin-bottom: 0; }
-  .tab-content .filter .txt-red {
-    color: #f00; }
-  .tab-content .filter .form-group {
-    display: inline-block; }
-    .tab-content .filter .form-group label {
-      font-weight: normal; }
-  .tab-content .filter .sport-info .btn {
-    width: 100%;
-    text-align: left;
-    background: #fff;
-    position: relative; }
-    .tab-content .filter .sport-info .btn .caret {
-      position: absolute;
-      right: 10px;
-      top: 13px; }
+  .tab-content .filter {
+    padding-top: 0; }
+    .tab-content .filter .main-option {
+      margin-bottom: 0; }
+    .tab-content .filter .txt-red {
+      color: #f00; }
+    .tab-content .filter .form-group {
+      display: inline-block;
+      vertical-align: bottom; }
+    .tab-content .filter .form-group > label {
+      text-transform: uppercase;
+      display: block; }
+    .tab-content .filter .form-group .control {
+      margin-left: 0; }
+    .tab-content .filter .sport-info .btn {
+      width: 100%;
+      text-align: left;
+      background: #fff;
+      position: relative; }
+      .tab-content .filter .sport-info .btn .caret {
+        position: absolute;
+        right: 10px;
+        top: 13px; }
   .tab-content .dropdown .btn {
     font-weight: normal; }
   .tab-content .league-content {
@@ -50,11 +54,13 @@
   .tab-content .dropdown .dropdown-menu {
     min-width: 200px;
     font-size: 12px; }
+  .tab-content .sport-info {
+    position: relative; }
   .tab-content .icon-excel {
-    float: right;
-    margin-top: 14px;
+    position: absolute;
+    bottom: 6px;
+    right: 0;
     cursor: pointer;
-    font-size: 20px;
     color: #1f7244; }
   .tab-content .ng2 {
     position: absolute;
@@ -62,6 +68,9 @@
     top: 42px;
     bottom: 0;
     right: 0; }
+  .tab-content .note {
+    overflow: hidden;
+    padding-bottom: 15px; }
 
 .main-content .fn-rs-content-header {
   padding-right: 0;

@@ -15,49 +15,59 @@
 }
 
 <div role="tabpanel" class="tab-pane active" id="outright">
-    <div class="row filter">
+    <div class="filter">
         @using (Html.BeginForm("Index", "Outright", FormMethod.Get, new { id = "frm-outright" }))
         {
-            <div class="col-sm-12">
-                <span class="txt">@Resources.From</span>
-                <div class="control date">
-                    <div class="input-group date" id="dpk-fromdate">
-                        @Html.EditorFor(model => model.FromDate, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
-                        <span class="input-group-addon">
-                            <span class="icon-calendar"></span>
-                        </span>
+            <div>
+                <div class="form-group">
+                    <label class="txt">@Resources.From</label>
+                    <div class="control date">
+                        <div class="input-group date" id="dpk-fromdate">
+                            @Html.EditorFor(model => model.FromDate, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                            <span class="input-group-addon">
+                                <span class="icon-calendar"></span>
+                            </span>
+                        </div>
                     </div>
                 </div>
-                <span class="txt">@Resources.To</span>
-                <div class="control date">
-                    <div class="input-group date" id="dpk-todate">
-                        @Html.EditorFor(model => model.ToDate, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
-                        <span class="input-group-addon">
-                            <span class="icon-calendar"></span>
-                        </span>
+                <div class="form-group">
+                    <label class="txt">@Resources.To</label>
+                    <div class="control date">
+                        <div class="input-group date" id="dpk-todate">
+                            @Html.EditorFor(model => model.ToDate, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                            <span class="input-group-addon">
+                                <span class="icon-calendar"></span>
+                            </span>
+                        </div>
                     </div>
                 </div>
-                <input type="submit" value="@Resources.Submit" class="btn-submit" id="btn-submit" />
-                <input type="submit" value="@Model.Today" class="btn-default btn-other-day" id="btn-today" />
-                <input type="submit" value="@Model.Yesterday" class="btn-default btn-other-day" id="btn-yesterday" />
+                <div class="form-group">
+                    <input type="submit" value="@Resources.Submit" class="btn-submit" id="btn-submit" />
+                    <input type="submit" value="@Model.Today" class="btn-default btn-other-day" id="btn-today" />
+                    <input type="submit" value="@Model.Yesterday" class="btn-default btn-other-day" id="btn-yesterday" />
+                </div>                
             </div>
-            <div class="col-sm-12">
+            <div class="note">
                 <span class="txt-red">*</span> @Model.MinResultDateMessage
             </div>
             if (Model.Sports != null && Model.Sports.Any())
             {
-                <div class="col-sm-12 sport-info">
-                    <span class="txt">@Resources.Sport</span>
+            <div class="sport-info">
+                <div class="form-group">
+                    <label class="txt">@Resources.Sport</label>
                     <div class="dropdown control">
                         @Html.DropDownListFor(model => model.SportType, Model.Sports, new { @class = "form-control", @onchange = "this.form.submit()" })
                     </div>
-
-                    <span class="txt">@Resources.League</span>
+                </div>
+                <div class="form-group">
+                    <label class="txt">@Resources.League</label>
                     <div class="dropdown control league-content">
                         @Html.DropDownListFor(model => model.LeagueId, Model.Leagues, Resources.ShowAllLeagues, new { @class = "form-control", @onchange = "this.form.submit()" })
                     </div>
-                    <span class="icon-excel" id="btn-excel"></span>
                 </div>
+                
+                <span class="icon-excel" id="btn-excel"></span>
+            </div>
             }
         }
     </div>

@@ -6,10 +6,10 @@
 
 
 <div role="tabpanel" class="tab-pane active" id="normal">
-    <div class="row filter">
+    <div class="filter">
         @using (Html.BeginForm("Index", "Normal", FormMethod.Get, new { @id = "result-filter" }))
         {
-            <div class="col-sm-12 main-option">
+            <div class="main-option">
                 <div class="form-group">
                     <label class="txt">@Resources.Date</label>
                     <div class="control date">
@@ -27,13 +27,13 @@
                     <input type="submit" value="@Model.Yesterday.ToShortDateFormatWithSlash()" id="yesterday-results" class="btn-default btn-other-day" />
                 </div>
             </div>
-            <div class="col-sm-12">
+            <div class="note">
                 <span class="txt-red">*</span> @Model.MinResultDateMessage
             </div>
 
             if (Model.Sports.Any())
             {
-                <div class="col-sm-12 sport-info">
+                <div class="sport-info">
                     <div class="form-group">
                         <label class="txt">@Resources.Sport</label>
                         <div class="dropdown control">

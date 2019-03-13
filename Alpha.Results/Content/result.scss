@@ -34,16 +34,17 @@ body {
             width: 130px;
         }
     }
-    
+
     .btn {
         font-size: 13px;
     }
 
     .filter {
-        [class^="col-"] {
-            margin-bottom: 15px;
+        padding-top: 0;
+
+        .main-option {
+            margin-bottom: 0;
         }
-        .main-option { margin-bottom: 0; }
 
         .txt-red {
             color: #f00;
@@ -51,7 +52,16 @@ body {
 
         .form-group {
             display: inline-block;
-            label { font-weight: normal; }
+            vertical-align: bottom;
+        }
+
+        .form-group > label {
+            text-transform: uppercase;
+            display: block;
+        }
+
+        .form-group .control {
+            margin-left: 0;
         }
 
         .sport-info {
@@ -83,11 +93,15 @@ body {
         font-size: 12px;
     }
 
+    .sport-info {
+        position: relative;
+    }
+
     .icon-excel {
-        float: right;
-        margin-top: 14px;
+        position: absolute;
+        bottom: 6px;
+        right: 0;
         cursor: pointer;
-        font-size: 20px;
         color: #1f7244;
     }
 
@@ -97,6 +111,11 @@ body {
         top: 42px;
         bottom: 0;
         right: 0;
+    }
+
+    .note {
+        overflow: hidden;
+        padding-bottom: 15px;
     }
 }
 
@@ -115,9 +134,8 @@ body {
 #detail-result-body {
     text-align: center;
 }
+
 /********************** Table ***************************/
-
-
 table {
     border-spacing: 0;
     border: 0;
