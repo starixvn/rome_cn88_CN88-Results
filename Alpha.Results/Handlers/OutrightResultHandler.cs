@@ -5,6 +5,7 @@
     using System.Diagnostics.CodeAnalysis;
     using System.Linq;
     using System.Web.Mvc;
+    using Alpha.Results.Site.Helpers;
     using App_GlobalResources;
     using Fanex.Common.Helper;
     using Fanex.Result.Core.Sportsbook.DTO;
@@ -12,7 +13,6 @@
     using Models.Requests;
     using Models.Views;
     using Services;
-    using Sunplus.Agent.Utilities.Extension;
 
     public class OutrightResultHandler :
          IRequestHandler<OutrightResultQuery, OutrightResultViewModel>,
@@ -56,9 +56,9 @@
             {
                 MinResultDate = balanceUpDate,
                 MaxResultDate = currentDate,
-                Today = currentDate.ToShortDateFormatWithSlash(),
-                Yesterday = currentDate.AddDays(-1).ToShortDateFormatWithSlash(),
-                MinResultDateMessage = string.Format(Resources.ViewDataFromDate, balanceUpDate.ToShortDateFormatWithSlash()),
+                Today = currentDate.ToCN88ShortDateFormat(),
+                Yesterday = currentDate.AddDays(-1).ToCN88ShortDateFormat(),
+                MinResultDateMessage = string.Format(Resources.ViewDataFromDate, balanceUpDate.ToCN88ShortDateFormat()),
                 FromDate = message.FromDate,
                 ToDate = message.ToDate
             };

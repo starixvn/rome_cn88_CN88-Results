@@ -4,13 +4,13 @@
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
+    using Alpha.Results.Site.Helpers;
     using Fanex.Result.Core.Sportsbook.DTO;
     using NSubstitute;
     using NUnit.Framework;
     using Site.Handlers;
     using Site.Models.Requests;
     using Site.Services;
-    using Sunplus.Agent.Utilities.Extension;
 
     [TestFixture]
     public class OutrightResultHandleTests
@@ -76,7 +76,7 @@
             var actualViewModel = _outrightResultHandler.Handle(query);
 
             //// Assert
-            Assert.AreEqual(actualViewModel.ToDate.ToShortDateFormatWithSlash(), actualViewModel.Today);
+            Assert.AreEqual(actualViewModel.ToDate.ToCN88ShortDateFormat(), actualViewModel.Today);
         }
 
         [Test]
@@ -89,7 +89,7 @@
             var actualViewModel = _outrightResultHandler.Handle(query);
 
             //// Assert
-            Assert.AreEqual(actualViewModel.ToDate.AddDays(-1).ToShortDateFormatWithSlash(), actualViewModel.Yesterday);
+            Assert.AreEqual(actualViewModel.ToDate.AddDays(-1).ToCN88ShortDateFormat(), actualViewModel.Yesterday);
         }
 
         [Test]
@@ -121,7 +121,7 @@
             var actualViewModel = _outrightResultHandler.Handle(query);
 
             //// Assert
-            var expectedMinResultDateMessage = $"You can view the report data from {balanceUpDate.ToShortDateFormatWithSlash()}.";
+            var expectedMinResultDateMessage = $"You can view the report data from {balanceUpDate.ToCN88ShortDateFormat()}.";
             Assert.AreEqual(expectedMinResultDateMessage, actualViewModel.MinResultDateMessage);
         }
 

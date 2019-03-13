@@ -34,7 +34,8 @@
                 VisibleDetailedLink = true,
                 VisibleFreeHeader = true,
                 VisibleMatchCodeIDColumn = false,
-                HighlightWinnerTeam = true
+                HighlightWinnerTeam = true,
+                DateTimeFormat = "{0:yyyy-MM-dd<br/>HH:mm:ss}"
             };
 
             var results = lucky3ResultDataAccess.GetResults(GetCriteria(request)).ToList();
@@ -53,7 +54,8 @@
                 ExcelTitle = request.ExcelTitle,
                 ExcelTemplatePath = request.TemplatePath,
                 VisibleMatchCodeIDColumn = false,
-                HighlightWinnerTeam = true
+                HighlightWinnerTeam = true,
+                DateTimeFormat = "{0:yyyy-MM-dd<br/>HH:mm:ss}"
             };
 
             var results = lucky3ResultDataAccess.GetResults(GetCriteria(request)).ToList();
@@ -81,7 +83,8 @@
                 VisibleMatchCodeIDColumn = false,
                 VisibleFreeHeader = true,
                 VisibleDetailedLink = true,
-                HighlightWinnerTeam = true
+                HighlightWinnerTeam = true,
+                DateTimeFormat = "{0:yyyy-MM-dd<br/>HH:mm:ss}"
             };
 
             var results = lucky3ResultDataAccess.GetResultDetails(criteria);

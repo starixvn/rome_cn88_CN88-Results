@@ -60,7 +60,8 @@ var normalResult =
     registerEvents: function () {
         normalResult.domElements.dpkContainer.datepicker({
             minDate: normalResult.domElements.txtMinResultDate.val(),
-            allowInputToggle: true
+            allowInputToggle: true,
+            format: 'YYYY-MM-DD'
         }).data("DateTimePicker").maxDate(normalResult.domElements.txtToday.val());
 
         normalResult.domElements.ddlSports.select2();
@@ -122,7 +123,7 @@ var normalResult =
                     normalResult.domElements.resultDetails.modal({});
                     normalResult.domElements.resultDetails.find('.modal-dialog').width(bodyWidth - 100);
                 }
-        });
+            });
 
         normalResult.domElements.excelBtn
             .off('click.normalResult')

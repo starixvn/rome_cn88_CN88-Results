@@ -3,8 +3,8 @@
     using System;
     using System.Collections.Generic;
     using System.Web.Mvc;
+    using Alpha.Results.Site.Helpers;
     using App_GlobalResources;
-    using Sunplus.Agent.Utilities.Extension;
     using Utils;
 
     public class NormalResultViewModel
@@ -15,7 +15,7 @@
         {
             get
             {
-                return string.Format(Resources.ViewDataFromDate, MinResultDate.ToShortDateFormatWithSlash());
+                return string.Format(Resources.ViewDataFromDate, MinResultDate.ToCN88ShortDateFormat());
             }
         }
 

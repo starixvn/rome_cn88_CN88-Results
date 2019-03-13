@@ -46,7 +46,8 @@ namespace Alpha.Results.Site.Services.Impl.Products
                 VisibleMatchCodeIDColumn = false,
                 VisibleFreeHeader = true,
                 VisibleDetailedLink = true,
-                HighlightWinnerTeam = true
+                HighlightWinnerTeam = true,
+                DateTimeFormat = "{0:yyyy-MM-dd<br/>HH:mm:ss}"
             };
 
             return _resultEngineAdapter.HtmlParser(results, resultSetting);

@@ -58,7 +58,8 @@
                 IsOutright = true,
                 IsPopUp = false,
                 VisibleMatchCodeIDColumn = false,
-                HighlightWinnerTeam = true
+                HighlightWinnerTeam = true,
+                DateTimeFormat = "{0:yyyy-MM-dd<br/>HH:mm:ss}"
             };
 
             return _resultEngineAdatper.HtmlParser(outrights.ToList(), resultSetting);
@@ -83,7 +84,8 @@
                 IsPopUp = false,
                 HighlightWinnerTeam = true,
                 ExcelTitle = excelTitle,
-                ExcelTemplatePath = request.TemplatePath
+                ExcelTemplatePath = request.TemplatePath,
+                DateTimeFormat = "{0:yyyy-MM-dd<br/>HH:mm:ss}"
             };
 
             return _resultEngineAdatper.ExcelParser(outrights.ToList(), resultSetting);

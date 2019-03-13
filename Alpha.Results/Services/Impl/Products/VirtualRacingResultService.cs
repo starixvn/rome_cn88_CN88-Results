@@ -40,7 +40,8 @@
                 VisibleDetailedLink = true,
                 VisibleFreeHeader = true,
                 VisibleMatchCodeIDColumn = false,
-                HighlightWinnerTeam = true
+                HighlightWinnerTeam = true,
+                DateTimeFormat = "{0:yyyy-MM-dd<br/>HH:mm:ss}"
             };
 
             var criteria = GetCriteria(request);
@@ -63,7 +64,8 @@
                 ExcelTitle = request.ExcelTitle,
                 ExcelTemplatePath = request.TemplatePath,
                 VisibleMatchCodeIDColumn = false,
-                HighlightWinnerTeam = true
+                HighlightWinnerTeam = true,
+                DateTimeFormat = "{0:yyyy-MM-dd<br/>HH:mm:ss}"
             };
 
             return _resultEngineAdapter.ExcelParser(results, resultSetting);
@@ -95,7 +97,8 @@
                 VisibleMatchCodeIDColumn = false,
                 VisibleFreeHeader = true,
                 VisibleDetailedLink = true,
-                HighlightWinnerTeam = true
+                HighlightWinnerTeam = true,
+                DateTimeFormat = "{0:yyyy-MM-dd<br/>HH:mm:ss}"
             };
 
             var criteria = new GetRacingResultDetailsCriteria

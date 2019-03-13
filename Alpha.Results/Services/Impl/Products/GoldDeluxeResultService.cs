@@ -61,7 +61,8 @@
                 IsPopUp = true,
                 LanguageCode = detailsRequest.Language,
                 VisibleMatchCodeIDColumn = false,
-                HighlightWinnerTeam = true
+                HighlightWinnerTeam = true,
+                DateTimeFormat = "{0:yyyy-MM-dd<br/>HH:mm:ss}"
             };
 
             return _resultEngineAdapter.HtmlParser(goldDeluxeResults, resultSetting);

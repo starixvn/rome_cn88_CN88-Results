@@ -192,4 +192,7 @@
   <data name="PokerGames" xml:space="preserve">
     <value>Poker Games</value>
   </data>
+  <data name="Event" xml:space="preserve">
+    <value>賽事</value>
+  </data>
 </root>

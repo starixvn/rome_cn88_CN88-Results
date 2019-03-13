@@ -14,7 +14,7 @@
                     <label class="txt">@Resources.Date</label>
                     <div class="control date">
                         <div class="input-group date" id="dpkContainer">
-                            @Html.EditorFor(model => model.ResultDate, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                            <input class="form-control text-box single-line" data-val="true" data-val-date="The field ResultDate must be a date." data-val-required="The ResultDate field is required." id="ResultDate" name="ResultDate" readonly="readonly" type="datetime" value="@Model.ResultDate.ToCN88ShortDateFormat()">
                             <span class="input-group-addon">
                                 <span class="icon-calendar"></span>
                             </span>
@@ -23,8 +23,8 @@
                 </div>
                 <div class="form-group">
                     <input type="submit" value="@Resources.Submit" id="selected-day-results" class="btn-submit" />
-                    <input type="submit" value="@Model.Today.ToShortDateFormatWithSlash()" id="today-results" class="btn-default btn-other-day" />
-                    <input type="submit" value="@Model.Yesterday.ToShortDateFormatWithSlash()" id="yesterday-results" class="btn-default btn-other-day" />
+                    <input type="submit" value="@Model.Today.ToCN88ShortDateFormat()" id="today-results" class="btn-default btn-other-day" />
+                    <input type="submit" value="@Model.Yesterday.ToCN88ShortDateFormat()" id="yesterday-results" class="btn-default btn-other-day" />
                 </div>
             </div>
 
@@ -52,8 +52,9 @@
     <div class="main-content" id="main-result">
         @Html.Raw(Model.HtmlResults)
     </div>
-    @Html.HiddenFor(model => model.MinResultDate)
-    @Html.HiddenFor(model => model.Today)
+
+    <input data-val="true" data-val-date="The field MinResultDate must be a date." data-val-required="The MinResultDate field is required." id="MinResultDate" name="MinResultDate" type="hidden" value="@Model.MinResultDate.ToCN88ShortDateFormat()" />
+    <input data-val="true" data-val-date="The field Today must be a date." data-val-required="The Today field is required." id="Today" name="Today" type="hidden" value="@Model.Today.ToCN88ShortDateFormat()" />
 </div>
 
 <div class="modal fade" id="result-details" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -74,8 +75,6 @@
 
 @section Scripts
 {
-
-
     @Scripts.Render(BundleConfig.NormalResultJavascriptBundleUrl)
 }
 

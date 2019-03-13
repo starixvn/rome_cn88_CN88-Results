@@ -59,7 +59,8 @@ namespace Alpha.Results.Site.Services.Impl.Products
                 LanguageCode = "en-US",
                 VisibleMatchCodeIDColumn = false,
                 VisiblePopUpTitle = true,
-                HighlightWinnerTeam = true
+                HighlightWinnerTeam = true,
+                DateTimeFormat = "{0:yyyy-MM-dd<br/>HH:mm:ss}"
             };
 
             return _resultEngineAdapter.HtmlParser(results, resultSetting);

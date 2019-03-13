@@ -5,13 +5,13 @@
     using System.Diagnostics.CodeAnalysis;
     using System.Linq;
     using System.Web.Mvc;
+    using Alpha.Results.Site.Helpers;
     using App_GlobalResources;
     using Fanex.Common.Helper;
     using MediatR;
     using Models.Requests;
     using Models.Views;
     using Services;
-    using Sunplus.Agent.Utilities.Extension;
 
     public class NormalResultHandler :
         IRequestHandler<NormalResultQuery, NormalResultViewModel>,
@@ -127,7 +127,7 @@
             Check.Argument.IsNotNull(message, "message");
 
             var leagueName = message.LeagueId == 0 ? Resources.ShowAllLeaguesExcelTitle : _cacheRefService.GetLeagueName(message.LeagueId);
-            var resultDate = message.ResultDate.ToShortDateFormatWithSlash();
+            var resultDate = message.ResultDate.ToCN88ShortDateFormat();
             message.MoveBetsDate = _reportService.GetMoveBetsDate();
 
             message.ExcelTitle = $"{Resources.Results} - {resultDate} | {_cacheRefService.GetSportName(message.SportId)} - {leagueName}";

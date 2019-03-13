@@ -112,7 +112,8 @@
                 IsOutright = true,
                 IsPopUp = false,
                 VisibleMatchCodeIDColumn = false,
-                HighlightWinnerTeam = true
+                HighlightWinnerTeam = true,
+                DateTimeFormat = "{0:yyyy-MM-dd<br/>HH:mm:ss}"
             };
 
             // Act
@@ -166,7 +167,8 @@
                 IsPopUp = false,
                 HighlightWinnerTeam = true,
                 ExcelTitle = "OUTRIGHT RESULTS - 11/14/2017 -> 11/14/2017 | SportName - LeagueName",
-                ExcelTemplatePath = query.TemplatePath
+                ExcelTemplatePath = query.TemplatePath,
+                DateTimeFormat = "{0:yyyy-MM-dd<br/>HH:mm:ss}"
             };
 
             // Act

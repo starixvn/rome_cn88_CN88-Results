@@ -3,13 +3,13 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using Alpha.Results.Site.Helpers;
     using NSubstitute;
     using NUnit.Framework;
     using Site.Handlers;
     using Site.Models;
     using Site.Models.Requests;
     using Site.Services;
-    using Sunplus.Agent.Utilities.Extension;
 
     [TestFixture]
     public class NormalResultHandlerTests
@@ -45,7 +45,7 @@
         public void HandleNormalResultQuery_WhenCalled_SetResultDateIsToday()
         {
             //// Arrange
-            var query = new NormalResultQuery(new Dictionary<int, bool>(),  DefaultLanguage);
+            var query = new NormalResultQuery(new Dictionary<int, bool>(), DefaultLanguage);
 
             //// Act
             var actualViewModel = _normalResultHandler.Handle(query);
@@ -64,7 +64,7 @@
             var actualViewModel = _normalResultHandler.Handle(query);
 
             //// Assert
-            var expectedMinResultDateMessage = $"You can view the report data from {actualViewModel.MinResultDate.ToShortDateFormatWithSlash()}.";
+            var expectedMinResultDateMessage = $"You can view the report data from {actualViewModel.MinResultDate.ToCN88ShortDateFormat()}.";
             Assert.AreEqual(expectedMinResultDateMessage, actualViewModel.MinResultDateMessage);
         }
 
@@ -461,7 +461,7 @@
 
             //// Assert
             _normalResultService.Received().GetExcelResults(Arg.Is<ExcelNormalResultQuery>(
-                excelQuery => excelQuery.ExcelTitle == string.Format(expectedExcelTitle, query.ResultDate.ToShortDateFormatWithSlash())));
+                excelQuery => excelQuery.ExcelTitle == string.Format(expectedExcelTitle, query.ResultDate.ToCN88ShortDateFormat())));
         }
 
         [Test]

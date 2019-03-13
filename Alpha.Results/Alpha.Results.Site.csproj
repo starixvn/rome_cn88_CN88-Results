@@ -687,6 +687,7 @@
     <Compile Include="Handlers\OutrightResultHandler.cs" />
     <Compile Include="Handlers\PokerGamesHandler.cs" />
     <Compile Include="Handlers\ThirdPartyResultHandler.cs" />
+    <Compile Include="Helpers\DateTimeExtensions.cs" />
     <Compile Include="Helpers\UrlHelper.cs" />
     <Compile Include="Models\Actor.cs" />
     <Compile Include="Models\BelongingInfo.cs" />

@@ -88,6 +88,15 @@ namespace Alpha.Results.Site.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Event.
+        /// </summary>
+        public static string Event {
+            get {
+                return ResourceManager.GetString("Event", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Export to Excel.
         /// </summary>
         public static string ExportToExcel {

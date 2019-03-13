@@ -37,7 +37,8 @@
                 VisibleDetailedLink = true,
                 VisibleFreeHeader = true,
                 VisibleMatchCodeIDColumn = false,
-                HighlightWinnerTeam = true
+                HighlightWinnerTeam = true,
+                DateTimeFormat = "{0:yyyy-MM-dd<br/>HH:mm:ss}"
             };
 
             var results = _numberGameResultDataAccess.GetNumberGameResults(GetCriteria(request));
@@ -70,7 +71,8 @@
                 ExcelTitle = request.ExcelTitle,
                 ExcelTemplatePath = request.TemplatePath,
                 VisibleMatchCodeIDColumn = false,
-                HighlightWinnerTeam = true
+                HighlightWinnerTeam = true,
+                DateTimeFormat = "{0:yyyy-MM-dd<br/>HH:mm:ss}"
             };
 
             var results = _numberGameResultDataAccess.GetNumberGameResults(GetCriteria(request));
@@ -123,7 +125,8 @@
                 VisibleMatchCodeIDColumn = false,
                 VisibleFreeHeader = true,
                 VisibleDetailedLink = true,
-                HighlightWinnerTeam = true
+                HighlightWinnerTeam = true,
+                DateTimeFormat = "{0:yyyy-MM-dd<br/>HH:mm:ss}"
             };
 
             var results = _numberGameResultDataAccess.GetNumberGameResultDetails(criteria);

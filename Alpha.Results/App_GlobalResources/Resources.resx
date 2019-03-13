@@ -196,4 +196,7 @@
   <data name="PokerGames" xml:space="preserve">
     <value>Poker Games</value>
   </data>
+  <data name="Event" xml:space="preserve">
+    <value>Event</value>
+  </data>
 </root>

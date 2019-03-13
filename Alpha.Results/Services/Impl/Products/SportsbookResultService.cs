@@ -52,7 +52,8 @@
                 VisibleFreeHeader = true,
                 VisibleMatchCodeIDColumn = false,
                 HighlightWinnerTeam = true,
-                EnableCheckScoreCalculated = true
+                EnableCheckScoreCalculated = true,
+                DateTimeFormat = "{0:yyyy-MM-dd<br/>HH:mm:ss}"
             };
 
             return _resultEngineAdapter.HtmlParser(results, resultSetting).Replace("original-title", " title ");
@@ -71,7 +72,8 @@
                 ExcelTemplatePath = request.TemplatePath,
                 VisibleMatchCodeIDColumn = false,
                 HighlightWinnerTeam = true,
-                EnableCheckScoreCalculated = true
+                EnableCheckScoreCalculated = true,
+                DateTimeFormat = "{0:yyyy-MM-dd<br/>HH:mm:ss}"
             };
 
             var results = _dataAccess.GetSportbookResults(GetCriteria(request)).ToList();
@@ -116,7 +118,8 @@
                 LanguageCode = detailsRequest.Language,
                 VisibleMatchCodeIDColumn = false,
                 HighlightWinnerTeam = true,
-                EnableCheckScoreCalculated = true
+                EnableCheckScoreCalculated = true,
+                DateTimeFormat = "{0:yyyy-MM-dd<br/>HH:mm:ss}"
             };
 
             return detailsRequest.IsViewResultFromBetList
