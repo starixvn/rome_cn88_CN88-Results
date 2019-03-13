@@ -45,34 +45,31 @@
                     <input type="submit" value="@Resources.Submit" class="btn-submit" id="btn-submit" />
                     <input type="submit" value="@Model.Today" class="btn-default btn-other-day" id="btn-today" />
                     <input type="submit" value="@Model.Yesterday" class="btn-default btn-other-day" id="btn-yesterday" />
-                </div>                
-            </div>
-            <div class="note">
-                <span class="txt-red">*</span> @Model.MinResultDateMessage
+                </div>
             </div>
             if (Model.Sports != null && Model.Sports.Any())
             {
-            <div class="sport-info">
-                <div class="form-group">
-                    <label class="txt">@Resources.Sport</label>
-                    <div class="dropdown control">
-                        @Html.DropDownListFor(model => model.SportType, Model.Sports, new { @class = "form-control", @onchange = "this.form.submit()" })
+                <div class="sport-info">
+                    <div class="form-group">
+                        <label class="txt">@Resources.Sport</label>
+                        <div class="dropdown control">
+                            @Html.DropDownListFor(model => model.SportType, Model.Sports, new { @class = "form-control", @onchange = "this.form.submit()" })
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label class="txt">@Resources.League</label>
-                    <div class="dropdown control league-content">
-                        @Html.DropDownListFor(model => model.LeagueId, Model.Leagues, Resources.ShowAllLeagues, new { @class = "form-control", @onchange = "this.form.submit()" })
+                    <div class="form-group">
+                        <label class="txt">@Resources.League</label>
+                        <div class="dropdown control league-content">
+                            @Html.DropDownListFor(model => model.LeagueId, Model.Leagues, Resources.ShowAllLeagues, new { @class = "form-control", @onchange = "this.form.submit()" })
+                        </div>
                     </div>
+
+                    <span class="icon-excel" id="btn-excel"></span>
                 </div>
-                
-                <span class="icon-excel" id="btn-excel"></span>
-            </div>
             }
         }
     </div>
     <div class="main-content">
-       @Html.Raw(Model.HtmlResults)
+        @Html.Raw(Model.HtmlResults)
     </div>
 
     @Html.HiddenFor(model => model.MinResultDate)
