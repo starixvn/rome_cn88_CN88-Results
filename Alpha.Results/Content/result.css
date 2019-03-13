@@ -38,19 +38,21 @@
       display: block; }
     .tab-content .filter .form-group .control {
       margin-left: 0; }
-    .tab-content .filter .sport-info .btn {
-      width: 100%;
-      text-align: left;
-      background: #fff;
-      position: relative; }
-      .tab-content .filter .sport-info .btn .caret {
-        position: absolute;
-        right: 10px;
-        top: 13px; }
+    .tab-content .filter .form-group .league-content {
+      width: 470px; }
+    .tab-content .filter .input-group.date .form-control {
+      padding: 0 6px; }
+  .tab-content .sport-info .btn {
+    width: 100%;
+    text-align: left;
+    background: #fff;
+    position: relative; }
+    .tab-content .sport-info .btn .caret {
+      position: absolute;
+      right: 10px;
+      top: 13px; }
   .tab-content .dropdown .btn {
     font-weight: normal; }
-  .tab-content .league-content {
-    width: 300px; }
   .tab-content .dropdown .dropdown-menu {
     min-width: 200px;
     font-size: 12px; }

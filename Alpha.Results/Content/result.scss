@@ -64,28 +64,30 @@ body {
             margin-left: 0;
         }
 
-        .sport-info {
-            .btn {
-                width: 100%;
-                text-align: left;
-                background: #fff;
-                position: relative;
+        .form-group .league-content {
+            width: 470px;
+        }
 
-                .caret {
-                    position: absolute;
-                    right: 10px;
-                    top: 13px;
-                }
-            }
+        .input-group.date .form-control {
+            padding: 0 6px;
+        }
+    }
+
+    .sport-info .btn {
+        width: 100%;
+        text-align: left;
+        background: #fff;
+        position: relative;
+
+        .caret {
+            position: absolute;
+            right: 10px;
+            top: 13px;
         }
     }
 
     .dropdown .btn {
         font-weight: normal;
-    }
-
-    .league-content {
-        width: 300px;
     }
 
     .dropdown .dropdown-menu {
