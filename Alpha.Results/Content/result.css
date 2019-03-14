@@ -38,7 +38,10 @@
       text-transform: uppercase;
       display: block; }
     .tab-content .filter .form-group .control {
-      margin-left: 0; }
+      margin-left: 0;
+      margin-right: 0; }
+    .tab-content .filter .form-group .sport-content {
+      width: 190px; }
     .tab-content .filter .form-group .league-content {
       width: 470px; }
     .tab-content .filter .input-group.date .form-control {
@@ -164,6 +167,23 @@ table.fn-rs.popup tbody .cl-result.home {
 table.fn-rs tbody .cl-match.away,
 table.fn-rs.popup tbody .cl-result.away {
   color: #ff5521; }
+
+table.racing .cl-race-name {
+  width: 83px;
+  text-align: left; }
+
+table.racing .cl-race {
+  width: 83px; }
+
+table.racing .cl-result {
+  text-align: left; }
+
+table.racing .cl-placing {
+  text-align: left; }
+
+table.racing .cl-win,
+table.racing .cl-place {
+  text-align: right; }
 
 table.lucky3 .cl-result {
   width: 150px; }

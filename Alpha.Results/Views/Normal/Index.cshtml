@@ -23,8 +23,6 @@
                 </div>
                 <div class="form-group">
                     <input type="submit" value="@Resources.Submit" id="selected-day-results" class="btn-submit" />
-                    <input type="submit" value="@Model.Today.ToCN88ShortDateFormat()" id="today-results" class="btn-default btn-other-day" />
-                    <input type="submit" value="@Model.Yesterday.ToCN88ShortDateFormat()" id="yesterday-results" class="btn-default btn-other-day" />
                 </div>
             </div>
 
@@ -33,7 +31,7 @@
                 <div class="sport-info">
                     <div class="form-group">
                         <label class="txt">@Resources.Sport</label>
-                        <div class="dropdown control">
+                        <div class="dropdown control sport-content">
                             @Html.DropDownListFor(model => model.SportId, Model.Sports, new { @class = "form-control" })
                         </div>
                     </div>

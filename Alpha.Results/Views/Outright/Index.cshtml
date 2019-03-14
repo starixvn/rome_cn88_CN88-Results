@@ -43,8 +43,6 @@
                 </div>
                 <div class="form-group">
                     <input type="submit" value="@Resources.Submit" class="btn-submit" id="btn-submit" />
-                    <input type="submit" value="@Model.Today" class="btn-default btn-other-day" id="btn-today" />
-                    <input type="submit" value="@Model.Yesterday" class="btn-default btn-other-day" id="btn-yesterday" />
                 </div>
             </div>
             if (Model.Sports != null && Model.Sports.Any())
@@ -52,7 +50,7 @@
                 <div class="sport-info">
                     <div class="form-group">
                         <label class="txt">@Resources.Sport</label>
-                        <div class="dropdown control">
+                        <div class="dropdown control sport-content">
                             @Html.DropDownListFor(model => model.SportType, Model.Sports, new { @class = "form-control", @onchange = "this.form.submit()" })
                         </div>
                     </div>
