@@ -527,7 +527,9 @@
     <Content Include="App_Data\SPNames\INTERNAL\Results.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Data\SPNames\LOCAL\Results.xml" />
+    <Content Include="App_Data\SPNames\LOCAL\Results.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\SPNames\PRO\Results.xml">
       <SubType>Designer</SubType>
     </Content>
