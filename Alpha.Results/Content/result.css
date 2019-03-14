@@ -1,6 +1,7 @@
 ﻿body {
   font-family: Arial, Tahoma, helvetica, sans-serif;
-  font-size: 13px; }
+  font-size: 13px;
+  color: #3b3b3b; }
 
 .ifr-result {
   position: absolute;
@@ -108,12 +109,13 @@ table.fn-rs {
     padding: 5px;
     vertical-align: middle; }
     table.fn-rs tbody td.cl-league {
+      padding-top: 4px;
+      padding-bottom: 4px;
       background: #f4f5e0;
       text-transform: uppercase;
       color: #333333;
       font-weight: bold;
-      line-height: initial;
-      height: 30px; }
+      line-height: initial; }
   table.fn-rs .cl-ko-time {
     text-align: left; }
   table.fn-rs .cl-ht-score,
@@ -123,7 +125,23 @@ table.fn-rs {
     text-align: center; }
 
 table.fn-rs tbody tr.even {
-  background: #eaeaed; }
+  background: #eaeaed;
+  border-bottom-color: #dbdbdb; }
+
+table.fn-rs tbody .cl-match {
+  padding-left: 8px; }
+
+table.fn-rs tbody .cl-match div.first-goal {
+  background: url("images/goal-icon.png") no-repeat -9px -32px; }
+
+table.fn-rs tbody .cl-match div.last-goal {
+  background: url("images/goal-icon.png") no-repeat -9px -16px; }
+
+table.fn-rs tbody .cl-match div.first-half-first-goal {
+  background: url("images/goal-icon.png") no-repeat -9px -65px; }
+
+table.fn-rs tbody .cl-match div.first-half-last-goal {
+  background: url("images/goal-icon.png") no-repeat no-repeat -9px -83px; }
 
 table.fn-rs tbody td,
 table.fn-rs thead th {
@@ -139,23 +157,13 @@ table.fn-rs .cl-ht-score, table.fn-rs .cl-f-score, table.fn-rs .cl-ht-score, tab
 table.fn-rs .cl-ko-time, table.fn-rs .cl-ko-time {
   width: 120px; }
 
-table.fn-rs tbody .cl-match.home, table.fn-rs.popup tbody .cl-result.home {
+table.fn-rs tbody .cl-match.home,
+table.fn-rs.popup tbody .cl-result.home {
   color: #1735b2; }
 
-table.fn-rs tbody .cl-match.away, table.fn-rs.popup tbody .cl-result.away {
+table.fn-rs tbody .cl-match.away,
+table.fn-rs.popup tbody .cl-result.away {
   color: #ff5521; }
-
-table.fn-rs tbody .cl-match div.first-goal {
-  background: url("images/goal-icon.png") no-repeat -9px -32px; }
-
-table.fn-rs tbody .cl-match div.last-goal {
-  background: url("images/goal-icon.png") no-repeat -9px -16px; }
-
-table.fn-rs tbody .cl-match div.first-half-first-goal {
-  background: url("images/goal-icon.png") no-repeat -9px -65px; }
-
-table.fn-rs tbody .cl-match div.first-half-last-goal {
-  background: url("images/goal-icon.png") no-repeat no-repeat -9px -83px; }
 
 table.lucky3 .cl-result {
   width: 150px; }
@@ -218,7 +226,8 @@ table.lucky3 .lotto-bets input {
   text-align: center; }
 
 /************************** Textbox **********************************/
-.form-control[readonly], fieldset[disabled] .form-control {
+.form-control[readonly],
+fieldset[disabled] .form-control {
   background: inherit; }
 
 .select2-dropdown {
@@ -255,17 +264,9 @@ body.keno iframe {
   #result-details .modal-dialog .modal-header .close {
     margin-top: 10px; }
 
-#detail-result-body table:not(.parlay) {
-  border: 1px solid #cbc9ca; }
-  #detail-result-body table:not(.parlay) tfoot tr:first-child td {
-    border-bottom: 1px solid #cbc9ca; }
-  #detail-result-body table:not(.parlay) thead tr th, #detail-result-body table:not(.parlay) tr th {
-    font-weight: normal; }
-  #detail-result-body table:not(.parlay) tr td, #detail-result-body table:not(.parlay) thead tr th, #detail-result-body table:not(.parlay) tr th {
-    border-right-width: 0;
-    border-bottom-width: 0;
-    border-right: 1px solid #cbc9ca;
-    border-top: 1px solid #cbc9ca;
-    white-space: nowrap; }
-  #detail-result-body table:not(.parlay) tbody + tfoot tr:first-child td {
-    border-top: 1px solid #cbc9ca; }
+#detail-result-body table:not(.parlay) thead tr th, #detail-result-body table:not(.parlay) tr th {
+  font-weight: normal; }
+
+#detail-result-body table:not(.parlay) tr td, #detail-result-body table:not(.parlay) thead tr th, #detail-result-body table:not(.parlay) tr th {
+  border: none;
+  white-space: nowrap; }

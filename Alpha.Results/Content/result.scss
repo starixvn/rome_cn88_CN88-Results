@@ -4,6 +4,7 @@
 body {
     font-family: $font-family;
     font-size: $font-size;
+    color: $text-color;
 }
 
 .ifr-result {
@@ -170,12 +171,13 @@ table.fn-rs {
             vertical-align: middle;
 
             &.cl-league {
+                padding-top: 4px;
+                padding-bottom: 4px;
                 background: #f4f5e0;
                 text-transform: uppercase;
                 color: #333333;
                 font-weight: bold;
                 line-height: initial;
-                height: $height-normal;
             }
         }
     }
@@ -194,8 +196,33 @@ table.fn-rs {
     }
 }
 
-table.fn-rs tbody tr.even {
-    background: $table-even-bg-color;
+table.fn-rs tbody {
+    tr.even {
+        background: $table-even-bg-color;
+        border-bottom-color: #dbdbdb;
+    }
+
+    .cl-match {
+        padding-left: 8px;
+    }
+
+    .cl-match div {
+        &.first-goal {
+            background: url($goal-icon) no-repeat -9px -32px;
+        }
+
+        &.last-goal {
+            background: url($goal-icon) no-repeat -9px -16px;
+        }
+
+        &.first-half-first-goal {
+            background: url($goal-icon) no-repeat -9px -65px;
+        }
+
+        &.first-half-last-goal {
+            background: url($goal-icon) no-repeat no-repeat -9px -83px;
+        }
+    }
 }
 
 table.fn-rs tbody td,
@@ -217,30 +244,15 @@ table.fn-rs, table.fn-rs {
     }
 }
 
-table.fn-rs tbody .cl-match.home, table.fn-rs.popup tbody .cl-result.home {
+
+table.fn-rs tbody .cl-match.home,
+table.fn-rs.popup tbody .cl-result.home {
     color: #1735b2;
 }
 
-table.fn-rs tbody .cl-match.away, table.fn-rs.popup tbody .cl-result.away {
+table.fn-rs tbody .cl-match.away,
+table.fn-rs.popup tbody .cl-result.away {
     color: #ff5521;
-}
-
-table.fn-rs tbody .cl-match div {
-    &.first-goal {
-        background: url($goal-icon) no-repeat -9px -32px;
-    }
-
-    &.last-goal {
-        background: url($goal-icon) no-repeat -9px -16px;
-    }
-
-    &.first-half-first-goal {
-        background: url($goal-icon) no-repeat -9px -65px;
-    }
-
-    &.first-half-last-goal {
-        background: url($goal-icon) no-repeat no-repeat -9px -83px;
-    }
 }
 
 table.lucky3 {
@@ -319,7 +331,8 @@ table.lucky3 {
 }
 
 /************************** Textbox **********************************/
-.form-control[readonly], fieldset[disabled] .form-control {
+.form-control[readonly], 
+fieldset[disabled] .form-control {
     background: inherit;
 }
 
@@ -375,26 +388,14 @@ body.keno iframe {
 }
 
 #detail-result-body table:not(.parlay) {
-    border: 1px solid $detail-result-border-color;
-
-    tfoot tr:first-child td {
-        border-bottom: 1px solid $detail-result-border-color;
-    }
-
+    
     thead tr th, tr th {
         font-weight: normal;
     }
 
     tr td, thead tr th, tr th {
-        border-right-width: 0;
-        border-bottom-width: 0;
-        border-right: 1px solid $detail-result-border-color;
-        border-top: 1px solid $detail-result-border-color;
+        border: none;
         white-space: nowrap;
-    }
-
-    tbody + tfoot tr:first-child td {
-        border-top: 1px solid $detail-result-border-color;
     }
 }
 
