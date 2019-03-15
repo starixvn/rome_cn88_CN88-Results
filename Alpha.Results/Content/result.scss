@@ -2,6 +2,7 @@
 @import "mixins";
 
 body {
+    margin: 0;
     font-family: $font-family;
     font-size: $font-size;
     color: $text-color;
@@ -188,19 +189,42 @@ table.fn-rs {
         }
     }
 
+    tbody td,
+    thead th {
+        padding: 6px 8px;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        border: none;
+    }
+
+    .cl-ht-score, .cl-f-score {
+        width: 100px;
+    }
+
+    .cl-ko-time {
+        width: 120px;
+    }
+    // Soccer
     .cl-ko-time {
         text-align: left;
     }
 
-    .cl-ht-score,
-    .cl-f-score {
+    .cl-ht-score, .cl-f-score {
         text-align: right;
     }
 
     .cl-status {
         text-align: center;
     }
-        
+    // Basketball
+    .cl-s, .cl-ot, .cl-ei {
+        text-align: right;
+    }
+    // Tennis
+    .cl-totalgames, .cl-totalpoint, .cl-totalset {
+        text-align: right;
+    }
 }
 
 table.fn-rs tbody {
@@ -231,26 +255,6 @@ table.fn-rs tbody {
         }
     }
 }
-
-table.fn-rs tbody td,
-table.fn-rs thead th {
-    padding: 6px 8px;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    border: none;
-}
-
-table.fn-rs, table.fn-rs {
-    .cl-ht-score, .cl-f-score {
-        width: 100px;
-    }
-
-    .cl-ko-time {
-        width: 120px;
-    }
-}
-
 
 table.fn-rs tbody .cl-match.home,
 table.fn-rs.popup tbody .cl-result.home {
@@ -363,8 +367,25 @@ table.lucky3 {
     }
 }
 
+
+// Happy 5
+
+table.happy5 .cl-detail-result {
+    text-align: center;
+}
+
+// Number game
+
+table.number-game .cl-warrior,
+table.number-game .cl-lblOEFT,
+table.number-game .cl-lbl1stball,
+table.number-game .cl-lastball {
+    text-align: center;
+}
+
+
 /************************** Textbox **********************************/
-.form-control[readonly], 
+.form-control[readonly],
 fieldset[disabled] .form-control {
     background: inherit;
 }
@@ -379,10 +400,6 @@ fieldset[disabled] .form-control {
 
 .width-200 {
     width: 200px;
-}
-
-.detail-result {
-    margin-top: 15px;
 }
 
 .lnk {

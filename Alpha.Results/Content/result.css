@@ -1,4 +1,5 @@
 ﻿body {
+  margin: 0;
   font-family: Arial, Tahoma, helvetica, sans-serif;
   font-size: 13px;
   color: #3b3b3b; }
@@ -119,13 +120,27 @@ table.fn-rs {
       color: #333333;
       font-weight: bold;
       line-height: initial; }
+  table.fn-rs tbody td,
+  table.fn-rs thead th {
+    padding: 6px 8px;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    border: none; }
+  table.fn-rs .cl-ht-score, table.fn-rs .cl-f-score {
+    width: 100px; }
+  table.fn-rs .cl-ko-time {
+    width: 120px; }
   table.fn-rs .cl-ko-time {
     text-align: left; }
-  table.fn-rs .cl-ht-score,
-  table.fn-rs .cl-f-score {
+  table.fn-rs .cl-ht-score, table.fn-rs .cl-f-score {
     text-align: right; }
   table.fn-rs .cl-status {
     text-align: center; }
+  table.fn-rs .cl-s, table.fn-rs .cl-ot, table.fn-rs .cl-ei {
+    text-align: right; }
+  table.fn-rs .cl-totalgames, table.fn-rs .cl-totalpoint, table.fn-rs .cl-totalset {
+    text-align: right; }
 
 table.fn-rs tbody tr.even {
   background: #eaeaed;
@@ -145,20 +160,6 @@ table.fn-rs tbody .cl-match div.first-half-first-goal {
 
 table.fn-rs tbody .cl-match div.first-half-last-goal {
   background: url("images/goal-icon.png") no-repeat no-repeat -9px -83px; }
-
-table.fn-rs tbody td,
-table.fn-rs thead th {
-  padding: 6px 8px;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  border: none; }
-
-table.fn-rs .cl-ht-score, table.fn-rs .cl-f-score, table.fn-rs .cl-ht-score, table.fn-rs .cl-f-score {
-  width: 100px; }
-
-table.fn-rs .cl-ko-time, table.fn-rs .cl-ko-time {
-  width: 120px; }
 
 table.fn-rs tbody .cl-match.home,
 table.fn-rs.popup tbody .cl-result.home {
@@ -245,6 +246,15 @@ table.lucky3 .lotto-bets input {
   height: 17px;
   text-align: center; }
 
+table.happy5 .cl-detail-result {
+  text-align: center; }
+
+table.number-game .cl-warrior,
+table.number-game .cl-lblOEFT,
+table.number-game .cl-lbl1stball,
+table.number-game .cl-lastball {
+  text-align: center; }
+
 /************************** Textbox **********************************/
 .form-control[readonly],
 fieldset[disabled] .form-control {
@@ -258,9 +268,6 @@ fieldset[disabled] .form-control {
 
 .width-200 {
   width: 200px; }
-
-.detail-result {
-  margin-top: 15px; }
 
 .lnk {
   color: #0072bb; }
