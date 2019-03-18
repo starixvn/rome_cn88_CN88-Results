@@ -26,7 +26,7 @@
 
         public override string GetSettingKey()
         {
-            return IsViewResultFromBetList ? "Age_BetList_SelMatchResult" : "Age_Result_MatchSelResultDetail";
+            return IsViewResultFromBetList ? "CS_TicketResult_Match" : "Age_Result_MatchSelResultDetail";
         }
 
         public override bool IsValid()

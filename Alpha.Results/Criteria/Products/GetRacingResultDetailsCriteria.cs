@@ -14,7 +14,7 @@ namespace Alpha.Results.Site.Criteria
 
         public override string GetSettingKey()
         {
-            return "Age_BetList_SelMatchResult2";
+            return "CS_TicketResult_Racing";
         }
     }
 }

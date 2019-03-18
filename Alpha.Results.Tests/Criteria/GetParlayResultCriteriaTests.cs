@@ -11,7 +11,7 @@
         {
             // Arrange
             var criteria = new GetParlayResultCriteria();
-            var expectedSettingKey = "Age_BetList_SelMatchResultParlay";
+            var expectedSettingKey = "CS_TicketResult_Parlay";
 
             // Act
             var actualSettingKey = criteria.GetSettingKey();

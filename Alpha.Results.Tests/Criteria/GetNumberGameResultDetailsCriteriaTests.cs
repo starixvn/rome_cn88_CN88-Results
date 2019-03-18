@@ -11,7 +11,7 @@
         {
             // Arrange
             var criteria = new GetNumberGameResultDetailsCriteria();
-            var expectedSettingKey = "Age_BetList_SelMatchResultNumberGame";
+            var expectedSettingKey = "CS_TicketResult_NumberGame";
 
             // Act
             var actualSettingKey = criteria.GetSettingKey();

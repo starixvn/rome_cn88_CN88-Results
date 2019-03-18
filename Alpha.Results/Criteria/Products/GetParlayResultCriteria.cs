@@ -11,7 +11,7 @@ namespace Alpha.Results.Site.Criteria
 
         public override string GetSettingKey()
         {
-            return "Age_BetList_SelMatchResultParlay";
+            return "CS_TicketResult_Parlay";
         }
 
         public override bool IsValid()

@@ -15,7 +15,7 @@
                 IsViewResultFromBetList = true
             };
 
-            var expectedSettingKey = "Age_BetList_SelMatchResult";
+            var expectedSettingKey = "CS_TicketResult_Match";
 
             // Act
             var actualSettingKey = criteria.GetSettingKey();
