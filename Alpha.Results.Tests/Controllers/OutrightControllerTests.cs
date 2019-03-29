@@ -8,18 +8,21 @@
     using Site.Helpers;
     using Site.Models.Requests;
     using Site.Models.Views;
+    using Sunplus.Agent.Model.Entities;
 
     [TestFixture]
     public class OutrightControllerTests
     {
         private IMediator mediator;
+        private IUserSession userSession;
         private OutrightController controller;
 
         [SetUp]
         public void SetUp()
         {
             mediator = Substitute.For<IMediator>();
-            controller = new OutrightController(mediator);
+            userSession = Substitute.For<IUserSession>();
+            controller = new OutrightController(mediator, userSession);
         }
 
         [Test]

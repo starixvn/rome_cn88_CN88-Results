@@ -1,22 +1,18 @@
 ﻿namespace Alpha.Results.Site.Controllers
 {
     using System.Web.Mvc;
-    using CN88.Web.Controllers;
     using MediatR;
     using Models.Requests;
     using Sunplus.Agent.Model.Entities;
 
-    public class PokerGamesController : CN88BaseController
+    public class PokerGamesController : SiteBaseController
     {
         private readonly IMediator _mediator;
-        private readonly IUserSession _userSession;
 
-        public PokerGamesController(
-            IMediator mediator,
-            IUserSession userSession)
+        public PokerGamesController(IMediator mediator, IUserSession userSession)
+            : base(userSession)
         {
             _mediator = mediator;
-            _userSession = userSession;
         }
 
         public ActionResult Index(PokerGamesResultQuery request)
