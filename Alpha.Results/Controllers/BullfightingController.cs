@@ -5,9 +5,8 @@
     using MediatR;
     using Models.Requests;
     using Sunplus.Agent.Model.Entities;
-    using Web;
 
-    public class BullfightingController : BaseController
+    public class BullfightingController : SiteBaseController
     {
         private readonly IMediator _mediator;
         private readonly IUserSession _userSession;

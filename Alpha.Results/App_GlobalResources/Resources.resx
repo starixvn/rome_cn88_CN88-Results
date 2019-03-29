@@ -199,4 +199,7 @@
   <data name="Event" xml:space="preserve">
     <value>Event</value>
   </data>
+  <data name="AccessDeny" xml:space="preserve">
+    <value>You are not authorized on this function.</value>
+  </data>
 </root>

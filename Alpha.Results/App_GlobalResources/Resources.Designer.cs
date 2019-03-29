@@ -61,6 +61,15 @@ namespace Alpha.Results.Site.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You are not authorized on this function..
+        /// </summary>
+        public static string AccessDeny {
+            get {
+                return ResourceManager.GetString("AccessDeny", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bullfighting.
         /// </summary>
         public static string Bullfighting {

@@ -2,9 +2,8 @@
 {
     using System.Web.Mvc;
     using System.Web.Routing;
-    using Web;
 
-    public class NG2Controller : BaseController
+    public class NG2Controller : SiteBaseController
     {
         [HttpGet]
         public ActionResult Index()

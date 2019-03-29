@@ -6,9 +6,8 @@
     using MediatR;
     using Models.Requests;
     using Models.Views;
-    using Web;
 
-    public class OutrightController : BaseController
+    public class OutrightController : SiteBaseController
     {
         private readonly IMediator _mediator;
 

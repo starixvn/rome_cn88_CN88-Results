@@ -195,4 +195,7 @@
   <data name="Event" xml:space="preserve">
     <value>賽事</value>
   </data>
+  <data name="AccessDeny" xml:space="preserve">
+    <value>您沒有使用此功能的權限.</value>
+  </data>
 </root>

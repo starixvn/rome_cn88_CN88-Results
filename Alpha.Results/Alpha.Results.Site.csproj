@@ -641,6 +641,7 @@
     <Compile Include="Controllers\NormalController.cs" />
     <Compile Include="Controllers\OutrightController.cs" />
     <Compile Include="Controllers\PokerGamesController.cs" />
+    <Compile Include="Controllers\SiteBaseController.cs" />
     <Compile Include="Controllers\TabController.cs" />
     <Compile Include="Controllers\ThirdPartyController.cs" />
     <Compile Include="Criteria\CheckBelongingCriteria.cs" />

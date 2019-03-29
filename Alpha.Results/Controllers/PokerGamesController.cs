@@ -8,10 +8,9 @@
     using Models.Requests;
     using Services;
     using Sunplus.Agent.Model.Entities;
-    using Web;
     using Web.Helpers;
 
-    public class PokerGamesController : BaseController
+    public class PokerGamesController : SiteBaseController
     {
         private readonly IMediator _mediator;
         private readonly IUserSession _userSession;

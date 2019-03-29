@@ -4,9 +4,8 @@
     using MediatR;
     using Models.Requests;
     using Sunplus.Agent.Model.Entities;
-    using Web;
 
-    public class KenoController : BaseController
+    public class KenoController : SiteBaseController
     {
         private readonly IMediator _mediator;
         private readonly IUserSession _userSession;
