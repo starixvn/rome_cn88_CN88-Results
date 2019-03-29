@@ -1,12 +1,13 @@
 ﻿namespace Alpha.Results.Site.Controllers
 {
     using System.Web.Mvc;
+    using CN88.Web.Controllers;
     using Constants;
     using MediatR;
     using Models.Requests;
     using Sunplus.Agent.Model.Entities;
 
-    public class BullfightingController : SiteBaseController
+    public class BullfightingController : CN88BaseController
     {
         private readonly IMediator _mediator;
         private readonly IUserSession _userSession;

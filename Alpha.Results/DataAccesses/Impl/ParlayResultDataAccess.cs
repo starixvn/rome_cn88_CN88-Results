@@ -6,6 +6,7 @@
     using System.Linq;
     using Criteria;
     using DataAccesses;
+    using Fanex.Data;
     using Fanex.Result.Core.Sportsbook.DTO;
 
     /// <summary>
@@ -27,7 +28,7 @@
 
             List<Parlay> results = null;
 
-            using (var db = ObjectDbFactory.CreateTimeOutInstance(criteria.GetSettingKey(), 600))
+            using (var db = ObjectDbFactory.CreateInstance(criteria.GetSettingKey(), 600))
             {
                 using (var reader = db.ExecuteReader(criteria.GetSpParams()))
                 {

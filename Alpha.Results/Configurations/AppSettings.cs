@@ -16,6 +16,8 @@
             set { appSettingValues = value; }
         }
 
+        public static string StoredProcedurePath => GetConfigValue("StoredProcedurePath");
+
         public static string NG2SiteAppPath => GetConfigValue("NG2SiteVirtualPath");
 
         public static bool LocalTest => GetConfigValue("LocalTest") == "1";
@@ -25,6 +27,8 @@
         public static string RemoteRefURL => GetConfigValue("RemoteRefURL");
 
         public static bool IsIntegrationTest => GetConfigValue("IsIntegrationTest") == "1";
+
+        public static string AccessDeniedPage => GetConfigValue("AccessDeniedPage");
 
         public static string GetConfigValue(string configName) => AppSettingValues[configName];
     }

@@ -2,8 +2,9 @@
 {
     using System.Web.Mvc;
     using System.Web.Routing;
+    using CN88.Web.Controllers;
 
-    public class NG2Controller : SiteBaseController
+    public class NG2Controller : CN88BaseController
     {
         [HttpGet]
         public ActionResult Index()

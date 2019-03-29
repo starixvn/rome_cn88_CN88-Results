@@ -1,5 +1,7 @@
 namespace Alpha.Results.Site.Criteria
 {
+    using System;
+    using Fanex.Data;
     using Fanex.Data.Repository;
 
     /// <summary>
@@ -16,5 +18,8 @@ namespace Alpha.Results.Site.Criteria
         {
             return "CS_TicketResult_Racing";
         }
+
+        public override bool IsValid()
+            => MatchId > 0;
     }
 }

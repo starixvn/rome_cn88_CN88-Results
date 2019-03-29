@@ -1,12 +1,12 @@
-﻿using Alpha.Web.Configurations;
+﻿using System.Collections.Generic;
+using System.Configuration;
+using Alpha.Web.Configurations;
 using Fanex.Logging;
 using Fanex.Logging.Extensions;
 using Fanex.Logging.Extensions.Database;
 using Fanex.Logging.Extensions.Web;
 using Fanex.Logging.RabbitMQ;
 using Fanex.Logging.Sentry.RavenClient;
-using System.Collections.Generic;
-using System.Configuration;
 
 namespace CN88.Features.Site.App_Start
 {
@@ -29,8 +29,8 @@ namespace CN88.Features.Site.App_Start
             }
 
             LogManager
-                    .SetDefaultLogCategory(ConfigurationManager.AppSettings["Fanex.Logging:DefaultCategory"])
-                    .Use(logEngines);
+                .SetDefaultLogCategory(ConfigurationManager.AppSettings["Fanex.Logging:DefaultCategory"])
+                .Use(logEngines);
 
             ExceptionHandler
                 .UseConfig(new LoggingConfiguration()

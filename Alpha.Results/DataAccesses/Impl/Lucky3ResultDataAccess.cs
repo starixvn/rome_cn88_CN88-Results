@@ -6,6 +6,7 @@
     using System.Linq;
     using Criteria;
     using DataAccesses;
+    using Fanex.Data;
     using Fanex.Result.Core.Lucky3.DTO;
 
     public class Lucky3ResultDataAccess : ILucky3ResultDataAccess

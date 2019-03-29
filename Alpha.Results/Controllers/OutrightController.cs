@@ -3,11 +3,12 @@
     using System;
     using System.Diagnostics.CodeAnalysis;
     using System.Web.Mvc;
+    using CN88.Web.Controllers;
     using MediatR;
     using Models.Requests;
     using Models.Views;
 
-    public class OutrightController : SiteBaseController
+    public class OutrightController : CN88BaseController
     {
         private readonly IMediator _mediator;
 

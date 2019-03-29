@@ -1,6 +1,9 @@
 ﻿namespace Alpha.Results.Site.Tests.Handlers
 {
     using System;
+    using System.Collections.Generic;
+    using Fanex.Logging;
+    using Fanex.Logging.RabbitMQ;
     using KellermanSoftware.CompareNetObjects;
     using NSubstitute;
     using NUnit.Framework;
@@ -15,6 +18,17 @@
         private PokerGamesHandler handler;
         private ICacheRefService cacheRefService;
         private CompareLogic compareLogic;
+
+        [OneTimeSetUp]
+        public void OneTimeSetUp()
+        {
+            LogManager
+                .SetDefaultLogCategory("CN88-AF-Local")
+                .Use(new List<ILogEngine>
+                {
+                    new RabbitMQLogging("host=10.18.200.103;virtualHost=/Fanex_Logging;username=fanexlogging;password=YKQrMtla7oYZGlP8apPtSw==")
+                });
+        }
 
         [SetUp]
         public void SetUp()

@@ -1,5 +1,6 @@
 ﻿namespace Alpha.Results.Site.Criteria
 {
+    using Fanex.Data;
     using Fanex.Data.Repository;
 
     public class GetGoldDeluxeResultCriteria : CriteriaBase
@@ -13,5 +14,8 @@
         {
             return "All_BetList_MatchResultGDSel";
         }
+
+        public override bool IsValid()
+            => TransId > 0;
     }
 }

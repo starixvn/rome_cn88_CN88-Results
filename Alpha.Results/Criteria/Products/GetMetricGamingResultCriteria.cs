@@ -1,5 +1,6 @@
 ﻿namespace Alpha.Results.Site.Criteria
 {
+    using Fanex.Data;
     using Fanex.Data.Repository;
 
     public class GetMetricGamingResultCriteria : CriteriaBase

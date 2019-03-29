@@ -20,13 +20,21 @@
         private IObjectDb objectDb;
         private ParlayResultDataAccess dataAccess;
 
+        [OneTimeSetUp]
+        public void OneTimeSetUp()
+        {
+            DbSettingProviderManager
+                .StartTestingSession()
+                .Run();
+        }
+
         [SetUp]
         public void SetUp()
         {
             compareLogic = new CompareLogic();
 
             objectDb = Substitute.For<IObjectDb>();
-            ObjectDbFactory.CreateTimeOutInstance = (settingKey, commandTimeOut) => objectDb;
+            ObjectDbFactory.Mock((key, commandTimeout) => objectDb);
 
             dataAccess = new ParlayResultDataAccess();
         }

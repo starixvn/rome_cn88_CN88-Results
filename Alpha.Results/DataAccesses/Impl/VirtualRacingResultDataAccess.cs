@@ -5,6 +5,7 @@
     using System.Data;
     using Criteria;
     using DataAccesses;
+    using Fanex.Data;
     using Fanex.Result.Core.Racing.DTO;
 
     public class VirtualRacingResultDataAccess : IVirtualRacingResultDataAccess

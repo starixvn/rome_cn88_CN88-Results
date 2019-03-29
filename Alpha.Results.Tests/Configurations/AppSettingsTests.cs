@@ -8,6 +8,23 @@
     public class AppSettingsTests
     {
         [Test]
+        public void StoredProcedurePath_HasConfig_ReturnsCorrectSetting()
+        {
+            // Arrange
+            AppSettings.AppSettingValues = new NameValueCollection
+            {
+                ["StoredProcedurePath"] = "App_Data\\SPNames"
+            };
+            var expectedSetting = "App_Data\\SPNames";
+
+            // Act
+            var actualSetting = AppSettings.StoredProcedurePath;
+
+            // Assert
+            Assert.AreEqual(expectedSetting, actualSetting);
+        }
+
+        [Test]
         public void NG2SiteAppPath_HasConfig_ReturnsCorrectSetting()
         {
             // Arrange

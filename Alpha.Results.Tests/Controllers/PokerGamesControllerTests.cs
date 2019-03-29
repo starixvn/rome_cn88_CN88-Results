@@ -5,7 +5,6 @@
     using NUnit.Framework;
     using Site.Controllers;
     using Site.Models.Requests;
-    using Site.Services;
     using Sunplus.Agent.Model.Entities;
 
     [TestFixture]
@@ -13,19 +12,17 @@
     {
         private IMediator mediator;
         private IUserSession userSession;
-        private IAuthorizationService authorizationService;
         private PokerGamesController controller;
 
         [SetUp]
         public void SetUp()
         {
             mediator = Substitute.For<IMediator>();
-            authorizationService = Substitute.For<IAuthorizationService>();
 
             userSession = Substitute.For<IUserSession>();
             userSession.Language.Returns("en-Us");
 
-            controller = new PokerGamesController(mediator, userSession, authorizationService);
+            controller = new PokerGamesController(mediator, userSession);
         }
 
         [Test]

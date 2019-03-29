@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using Criteria;
     using Fanex.Common;
+    using Fanex.Data;
     using Fanex.Result.Core.MetricGaming.DTO;
 
     public class MetricGamingResultDataAccess : IMetricGamingResultDataAccess

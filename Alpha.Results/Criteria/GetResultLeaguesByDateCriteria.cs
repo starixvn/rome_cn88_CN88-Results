@@ -2,6 +2,7 @@
 {
     using System;
     using Configurations;
+    using Fanex.Data;
     using Fanex.Data.Repository;
 
     public class GetResultLeaguesByDateCriteria : CriteriaBase
@@ -30,5 +31,8 @@
         {
             return "Age_Result_LeagueSelByDate";
         }
+
+        public override bool IsValid()
+            => SportId > 0;
     }
 }

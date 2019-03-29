@@ -8,5 +8,8 @@
         {
             return "Age_SelBalanceUpDay";
         }
+
+        public override bool IsValid()
+            => true;
     }
 }

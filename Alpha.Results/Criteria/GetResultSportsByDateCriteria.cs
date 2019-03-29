@@ -27,5 +27,8 @@
         {
             return "Age_Result_SportSelByDate";
         }
+
+        public override bool IsValid()
+            => true;
     }
 }

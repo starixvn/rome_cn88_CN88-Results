@@ -7,8 +7,11 @@
     using System.Web.Routing;
     using App_Start;
     using CN88.Features.Site.App_Start;
+    using CN88.Web.Filters;
     using Configurations;
-    using Fanex.Logging.Extensions.Database;
+    using Fanex.Data;
+    using Fanex.Data.CrossCutting.WrappingException;
+    using Fanex.Data.OldConnectionStringProvider;
     using Fanex.Logging.Extensions.Web;
     using Fanex.RemotingRef;
     using Fanex.Result.Core.Base;
@@ -23,24 +26,30 @@
     {
         protected void Application_Start()
         {
+            ViewEngines.Engines.Clear();
+            ViewEngines.Engines.Add(new RazorViewEngine());
+            MvcHandler.DisableMvcResponseHeader = true;
+
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             LoggingManager.Init();
             DependencyConfig.Init();
 
-            Fanex.Data.Configuration.DbSettingProviderManager.Current.Start();
+            DbSettingProviderManager
+                .StartNewSession()
+                .Use(new OldConnectionStringProvider())
+                .UseDefaultDbSettingProvider(resourcePath: AppSettings.StoredProcedurePath)
+                .Use((settingKey, commandTimeout) => new WrappingExceptionObjectDb(settingKey, commandTimeout))
+                .Run();
 
             ShareSession.Init();
             StaticResources.Init(StaticResources.GetBuildVersion());
 
             GlobalFilters.Filters.Add(new CheckUMFilter());
+            GlobalFilters.Filters.Add(new AfterLoginFlowFilter());
+            GlobalFilters.Filters.Add(new CheckBelongingFilter());
             GlobalFilters.Filters.Add(new NoCacheFilter());
-
-            var loggingConfiguration = new LoggingConfiguration()
-                .UseGetDbExceptionInfo(DatabaseInfoGetters.GetDbExceptionInfo);
-
-            ExceptionHandler.UseConfig(loggingConfiguration);
 
             RefDataTypeContainer
                 .ConnectTo(new Uri(AppSettings.RemoteRefURL))

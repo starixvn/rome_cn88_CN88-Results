@@ -12,12 +12,10 @@
         private const string BalanceUpAndMoveBetsDateCacheKey = "Alpha.Results.Site.Services.Impl.BalanceUpAndMoveBetsDate";
 
         private readonly IDynamicRepository _dynamicRepository;
-        private readonly ICache _cacheManager;
 
-        public ReportDateService(IDynamicRepository dynamicRepository, ICache cacheManager)
+        public ReportDateService(IDynamicRepository dynamicRepository)
         {
             _dynamicRepository = dynamicRepository ?? new DynamicRepository();
-            _cacheManager = cacheManager ?? CacheService.CreateInstance(CacheType.MemoryCache);
         }
 
         [SuppressMessage("Microsoft.Usage", "CA2201:DoNotRaiseReservedExceptionTypes", Justification = "Reviewed")]
@@ -33,22 +31,19 @@
 
         [SuppressMessage("Microsoft.Usage", "CA2201:DoNotRaiseReservedExceptionTypes", Justification = "Reviewed!")]
         public BalanceUpAndMoveBetsDate GetBalanceUpAndMoveBetsDate()
-        {
-            var data = _cacheManager.Get<BalanceUpAndMoveBetsDate>(BalanceUpAndMoveBetsDateCacheKey);
-
-            if (data == null)
-            {
-                data = _dynamicRepository.Get<BalanceUpAndMoveBetsDate>(new GetBalanceUpAndMoveBetsDayCriteria());
-
-                if (data == null)
+            => ConfiguredCacheService.GetOrSet(
+                BalanceUpAndMoveBetsDateCacheKey,
+                () =>
                 {
-                    throw new Exception("Cannot get balance up date and move bets date.");
-                }
+                    var data = _dynamicRepository.Get<BalanceUpAndMoveBetsDate>(new GetBalanceUpAndMoveBetsDayCriteria());
 
-                _cacheManager.Set(BalanceUpAndMoveBetsDateCacheKey, data);
-            }
+                    if (data == null)
+                    {
+                        throw new Exception("Cannot get balance up date and move bets date.");
+                    }
 
-            return data;
-        }
+                    return data;
+                },
+                new CacheItemOptions().SetAbsoluteExpiration(TimeSpan.FromSeconds(120)));
     }
 }
