@@ -1,5 +1,6 @@
 ﻿namespace Alpha.Results.Site.Criteria
 {
+    using System.Collections;
     using Fanex.Data;
     using Fanex.Data.Repository;
 
@@ -18,7 +19,6 @@
         [SpParam(Ignored = true)]
         public bool IsViewResultFromBetList { get; set; }
 
-        [SpParam(Ignored = true)]
         public int BetType { get; set; }
 
         public long BetId { get; set; }
@@ -27,13 +27,27 @@
         public int Handicap2 { get; set; }
 
         public override string GetSettingKey()
+            => IsViewResultFromBetList
+            ? "CS_TicketResult_Match"
+            : "Age_Result_MatchSelResultDetail";
+
+        public override Hashtable GetSpParams()
         {
-            return IsViewResultFromBetList ? "CS_TicketResult_Match" : "Age_Result_MatchSelResultDetail";
+            var inputParams = new Hashtable
+            {
+                ["matchid"] = MatchId,
+            };
+
+            if (IsViewResultFromBetList)
+            {
+                inputParams.Add("bettype", BetType);
+                inputParams.Add("betid", BetId);
+            }
+
+            return inputParams;
         }
 
         public override bool IsValid()
-        {
-            return MatchId > 0;
-        }
+            => MatchId > 0;
     }
 }
