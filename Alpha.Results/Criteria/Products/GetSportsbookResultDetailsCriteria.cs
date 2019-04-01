@@ -18,6 +18,7 @@
         [SpParam(Ignored = true)]
         public bool IsViewResultFromBetList { get; set; }
 
+        [SpParam(Ignored = true)]
         public int BetType { get; set; }
 
         public long BetId { get; set; }
