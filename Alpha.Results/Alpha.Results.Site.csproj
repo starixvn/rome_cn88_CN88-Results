@@ -821,16 +821,14 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="App_GlobalResources\Resources.ja-JP.resx" />
-    <EmbeddedResource Include="App_GlobalResources\Resources.ko-KR.resx" />
     <EmbeddedResource Include="App_GlobalResources\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="App_GlobalResources\Resources.th-TH.resx" />
-    <EmbeddedResource Include="App_GlobalResources\Resources.vi-VN.resx" />
-    <EmbeddedResource Include="App_GlobalResources\Resources.zh-CN.resx" />
+    <EmbeddedResource Include="App_GlobalResources\Resources.zh-Hans.resx">
+      <LastGenOutput>Resources.zh-Hans.designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="App_GlobalResources\Resources.zh-TW.resx" />
   </ItemGroup>
   <ItemGroup>
