@@ -153,6 +153,8 @@ table {
     font-size: $font-size;
 }
 
+
+
 table.fn-rs {
     min-width: unset;
 
@@ -165,6 +167,10 @@ table.fn-rs {
         color: $table-header-color !important;
         font-weight: normal !important;
         text-align: left;
+    }
+
+    .header, .sub-header {
+        background-color: transparent;
     }
 
     tbody {
