@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="MixParlay" xml:space="preserve">
-    <value>混合過關</value>
+    <value>綜合過關</value>
   </data>
   <data name="Outright" xml:space="preserve">
     <value>優勝冠軍</value>
@@ -127,7 +127,7 @@
     <value>賽果</value>
   </data>
   <data name="Normal" xml:space="preserve">
-    <value>一般</value>
+    <value>普通</value>
   </data>
   <data name="OutrightResults" xml:space="preserve">
     <value>優勝冠軍賽果</value>
@@ -145,10 +145,10 @@
     <value>到</value>
   </data>
   <data name="Submit" xml:space="preserve">
-    <value>提交</value>
+    <value>保存</value>
   </data>
   <data name="ExportToExcel" xml:space="preserve">
-    <value>導出到Excel</value>
+    <value>導出Excel</value>
   </data>
   <data name="From" xml:space="preserve">
     <value>從</value>
@@ -166,7 +166,7 @@
     <value>日期</value>
   </data>
   <data name="ShowAllLeagues" xml:space="preserve">
-    <value>所有聯賽</value>
+    <value>所有聯盟</value>
   </data>
   <data name="ThereIsNoData" xml:space="preserve">
     <value>沒有數據</value>
@@ -196,6 +196,6 @@
     <value>賽事</value>
   </data>
   <data name="AccessDeny" xml:space="preserve">
-    <value>您沒有使用此功能的權限.</value>
+    <value>您無權限使用此功能</value>
   </data>
 </root>
