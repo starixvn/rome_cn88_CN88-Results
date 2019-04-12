@@ -5,3 +5,16 @@
 <li role="presentation" class="@((Model.SelectedTabName == "outright") ? "active" : string.Empty)">
     @Html.ActionLink(Resources.Outright, "index", "outright", null, new { id = "tabOutright" })
 </li>
+@if (Model.IsEnabledKenoTab)
+{
+    <li role="presentation" class="@((Model.SelectedTabName == "keno") ? "active" : string.Empty)">
+        @Html.ActionLink(Resources.Keno, "index", "keno", null, new { id = "tabKeno" })
+    </li>
+}
+
+@if (Model.IsEnableLottery)
+{
+    <li role="presentation" class="@((Model.SelectedTabName == "lottery") ? "active" : string.Empty)">
+        @Html.ActionLink(Model.GetProductName(Alpha.Results.Site.Constants.ProductIdConstants.Lottery), "index", "lottery", null, new { id = "tablottery" })
+    </li>
+}
