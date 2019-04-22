@@ -13,16 +13,6 @@
         protected SiteBaseController(IUserSession userSession)
         {
             _userSession = userSession;
-        }
-
-        protected override void OnAuthorization(AuthorizationContext filterContext)
-        {
-            base.OnAuthorization(filterContext);
-
-            if (!_userSession.SubPageAccess.ViewTotalBets)
-            {
-                UnAuthentication(filterContext);
-            }
-        }
+        }        
     }
 }
