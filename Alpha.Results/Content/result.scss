@@ -219,6 +219,18 @@ table.fn-rs {
     .cl-ht-score, .cl-f-score {
         text-align: right;
     }
+    
+    .cl-status .detail-link {
+        line-height: 30px;
+        display: inline-block;
+
+        &:before, &:after {
+            display: inline-block;
+            content: "";
+            width: 10px;
+            height: 10px;
+        }
+    }
 
     .cl-status {
         text-align: center;
