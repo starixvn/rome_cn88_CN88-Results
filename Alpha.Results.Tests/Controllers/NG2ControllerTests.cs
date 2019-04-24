@@ -2,19 +2,23 @@
 {
     using System.Web.Mvc;
     using System.Web.Routing;
+    using NSubstitute;
     using NUnit.Framework;
     using Site.Controllers;
+    using Sunplus.Agent.Model.Entities;
 
     [TestFixture]
     public class NG2ControllerTests
     {
+        private IUserSession userSession;
         private NG2Controller controller;
 
         [SetUp]
         public void SetUp()
         {
             Site.Helpers.UrlHelper.NG2ResultPath = "NG2ResultPath";
-            controller = new NG2Controller();
+            userSession = Substitute.For<IUserSession>();
+            controller = new NG2Controller(userSession);
         }
 
         [Test]

@@ -3,16 +3,17 @@
     using System;
     using System.Diagnostics.CodeAnalysis;
     using System.Web.Mvc;
-    using CN88.Web.Controllers;
     using MediatR;
     using Models.Requests;
     using Models.Views;
+    using Sunplus.Agent.Model.Entities;
 
-    public class NormalController : CN88BaseController
+    public class NormalController : SiteBaseController
     {
         private readonly IMediator _mediator;
 
-        public NormalController(IMediator mediator)
+        public NormalController(IMediator mediator, IUserSession userSession)
+            : base(userSession)
         {
             _mediator = mediator;
         }

@@ -2,10 +2,15 @@
 {
     using System.Web.Mvc;
     using System.Web.Routing;
-    using CN88.Web.Controllers;
+    using Sunplus.Agent.Model.Entities;
 
-    public class NG2Controller : CN88BaseController
+    public class NG2Controller : SiteBaseController
     {
+        public NG2Controller(IUserSession userSession)
+            : base(userSession)
+        {
+        }
+
         [HttpGet]
         public ActionResult Index()
         {

@@ -106,6 +106,8 @@ table.fn-rs {
     color: #3b3b3b !important;
     font-weight: normal !important;
     text-align: left; }
+  table.fn-rs .header, table.fn-rs .sub-header {
+    background-color: transparent; }
   table.fn-rs tbody tr {
     border-width: 0 0 1px 0;
     border-bottom: 1px solid #e5e5e5; }
@@ -135,6 +137,14 @@ table.fn-rs {
     text-align: left; }
   table.fn-rs .cl-ht-score, table.fn-rs .cl-f-score {
     text-align: right; }
+  table.fn-rs .cl-status .detail-link {
+    line-height: 30px;
+    display: inline-block; }
+    table.fn-rs .cl-status .detail-link:before, table.fn-rs .cl-status .detail-link:after {
+      display: inline-block;
+      content: "";
+      width: 10px;
+      height: 10px; }
   table.fn-rs .cl-status {
     text-align: center; }
   table.fn-rs .cl-s, table.fn-rs .cl-ot, table.fn-rs .cl-ei {
