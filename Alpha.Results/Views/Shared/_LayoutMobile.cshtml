@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html class="ifr-result">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@Html.Raw(ViewBag.Title)</title>
+    <link href="" rel="stylesheet" />
+    @Alpha.Web.Helpers.StaticResources.AssetStyles.Render("/bundles/common/common")
+    @Alpha.Web.Helpers.StaticResources.AssetStyles.Render("/bundles/site-results/default")
+
+    @RenderSection("ComponentStyles", false)
+
+    @Styles.Render(BundleConfig.ResultCoreStyleBundleUrl)
+
+    @RenderSection("Styles", false)
+
+</head>
+<body>
+    <div id="page_main">
+        <div id="page_main">
+            <div class="container-fluid">
+                <div class="">
+                    <ul class="nav nav-tabs" role="tablist">
+                        @Html.Action("Index", "Tab", new { tabName = ViewContext.RouteData.Values["controller"], area = "" })
+                    </ul>
+                    <div class="tab-content">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @Html.Hidden("RootURL", HttpContext.Current.Response.ApplyAppPathModifier("~/"))
+
+    @Alpha.Web.Helpers.StaticResources.AssetScripts.Render("/bundles/site-results/default")
+
+    @RenderSection("Scripts", false)
+
+    @Alpha.Web.Helpers.GoogleAnalyticHepler.Render()
+</body>
+</html>

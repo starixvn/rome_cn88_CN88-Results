@@ -308,3 +308,14 @@ body.keno iframe {
 
 table.fn-rs-popup {
   width: 100%; }
+/* ----------- Mobile ----------- */
+@media only screen and (max-device-width: 743px) {
+  .ifr-result > body {
+    padding: 10px 0; }
+  body {
+    background-color: #fff;
+    font-size: 10.5px; }
+  .container-fluid {
+    padding: 0; }
+  .tab-content {
+    padding: 20px 10px 0; } }

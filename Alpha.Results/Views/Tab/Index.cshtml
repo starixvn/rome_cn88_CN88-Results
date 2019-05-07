@@ -1,4 +1,5 @@
 ﻿@model TabViewModel
+
 <li role="presentation" class="@((Model.SelectedTabName == "normal") ? "active" : string.Empty)">
     @Html.ActionLink(Resources.Event, "index", "normal", null, new { id = "tabNormal" })
 </li>
