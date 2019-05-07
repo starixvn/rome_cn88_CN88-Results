@@ -305,3 +305,6 @@ body.keno iframe {
 #detail-result-body table:not(.parlay) tr td, #detail-result-body table:not(.parlay) thead tr th, #detail-result-body table:not(.parlay) tr th {
   border: none;
   white-space: nowrap; }
+
+table.fn-rs-popup {
+  width: 100%; }
