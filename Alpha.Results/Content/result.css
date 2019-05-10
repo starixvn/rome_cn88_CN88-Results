@@ -308,14 +308,25 @@ body.keno iframe {
 
 table.fn-rs-popup {
   width: 100%; }
-/* ----------- Mobile ----------- */
-@media only screen and (max-device-width: 743px) {
-  .ifr-result > body {
-    padding: 10px 0; }
-  body {
-    background-color: #fff;
+.detail-result {
+  padding: 20px; }
+
+@media (max-device-width: 767px) {
+  table,
+  table.fn-rs tbody .cl-match {
     font-size: 10.5px; }
-  .container-fluid {
-    padding: 0; }
-  .tab-content {
-    padding: 20px 10px 0; } }
+  .detail-result {
+    padding: 12px; }
+  .fn-rs-popup.parlay .sporttype {
+    text-align: left;
+    padding: 13px 0;
+    font-size: 10.5px; }
+  table.popup {
+    min-width: initial !important; }
+  #detail-result-body table:not(.parlay) tr td,
+  #detail-result-body table:not(.parlay) thead tr th,
+  #detail-result-body table:not(.parlay) tr th {
+    border: none;
+    white-space: initial; }
+  table.fn-rs .cl-ko-time {
+    width: 137px; } }

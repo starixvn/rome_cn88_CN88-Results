@@ -153,8 +153,6 @@ table {
     font-size: $font-size;
 }
 
-
-
 table.fn-rs {
     min-width: unset;
 
@@ -464,20 +462,41 @@ body.keno iframe {
 
 table.fn-rs-popup {
     width: 100%;
+    }
+.detail-result {
+    padding: 20px;
 }
-/* ----------- Mobile ----------- */
-@media only screen and (max-device-width : $conent-device-lower768) {
-    .ifr-result > body {
-        padding: 10px 0;
+}
+@media (max-device-width: $screen-device-lower768) {
+    table,
+    table.fn-rs tbody .cl-match {
+        font-size: $font-size-mobile;
     }
-    body {
-        background-color: #fff;
-        font-size: $font-size-mobile;            
+    .detail-result {
+        padding: 12px;
     }
-    .container-fluid {
-        padding: 0;
+    .fn-rs-popup.parlay {
+        .sporttype {
+            text-align: left;
+            padding: 13px 0;
+            font-size: $font-size-mobile;
+        }
     }
-    .tab-content {
-        padding: 20px 10px 0;
+
+    table.popup {
+        min-width: initial !important;
+    }
+
+    #detail-result-body table:not(.parlay) tr td,
+    #detail-result-body table:not(.parlay) thead tr th,
+    #detail-result-body table:not(.parlay) tr th {
+        border: none;
+        white-space: initial;
+    }    
+
+    table.fn-rs .cl-ko-time {
+        width: 137px;
     }
 }
+
+
