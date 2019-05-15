@@ -4,12 +4,21 @@
 
 @model NormalResultViewModel
 
-@{ 
+@{
     Layout = "~/Views/Shared/_LayoutMobile.cshtml";
 }
 
 <div role="tabpanel" class="tab-pane active" id="normal">
-    <div class="filter">
+    @if (Model.IsDevice)
+            {
+        <div class="page-title">
+            <div class="sub-title">
+                <span class="icon-filter-down" id="filter-toggle-icon"></span>
+            </div>
+        </div>
+    }
+
+    <div class="filter" id="report-form">
         @using (Html.BeginForm("Index", "Normal", FormMethod.Get, new { @id = "result-filter" }))
         {
             <div class="main-option">

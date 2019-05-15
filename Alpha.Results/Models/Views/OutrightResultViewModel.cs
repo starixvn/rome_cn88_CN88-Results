@@ -3,9 +3,17 @@
     using System;
     using System.Collections.Generic;
     using System.Web.Mvc;
+    using Helpers;
 
     public class OutrightResultViewModel
     {
+        private readonly BrowserHelper browserHelper;
+
+        public OutrightResultViewModel()
+        {
+            browserHelper = new BrowserHelperImpl();
+        }
+
         public DateTime MinResultDate { get; set; }
 
         public DateTime MaxResultDate { get; set; }
@@ -29,5 +37,7 @@
         public int LeagueId { get; set; }
 
         public string HtmlResults { get; set; }
+
+        public bool IsDevice => browserHelper.IsMobile() && !browserHelper.IsTablet();
     }
 }

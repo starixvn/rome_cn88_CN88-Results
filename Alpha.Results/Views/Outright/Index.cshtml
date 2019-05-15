@@ -3,23 +3,32 @@
 }
 
 @*@section ComponentStyles
-{
-    <link href="/contents/components/datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
-}*@
+    {
+        <link href="/contents/components/datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    }*@
 
 @model OutrightResultViewModel
 
 @*@section styles
-{
-    <link href="/contents/components/select2/css/select2.min.css" rel="stylesheet" />
-}*@
+    {
+        <link href="/contents/components/select2/css/select2.min.css" rel="stylesheet" />
+    }*@
 
 @{
     Layout = "~/Views/Shared/_LayoutMobile.cshtml";
 }
 
 <div role="tabpanel" class="tab-pane active" id="outright">
-    <div class="filter">
+    @if (Model.IsDevice)
+            {
+        <div class="page-title">
+            <div class="sub-title">
+                <span class="icon-filter-down" id="filter-toggle-icon"></span>
+            </div>
+        </div>
+    }
+
+    <div class="filter" id="report-form">
         @using (Html.BeginForm("Index", "Outright", FormMethod.Get, new { id = "frm-outright" }))
         {
             <div>

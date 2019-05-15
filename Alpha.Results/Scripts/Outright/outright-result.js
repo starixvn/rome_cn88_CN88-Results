@@ -58,11 +58,17 @@
 
             iframe.attr('src', downloadUrl);
         });
+
+        if ($(".icon-filter-down").length) {
+            var toggleHandler = new ToggleHandler($);
+            toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "main-result"));
+        }
     }
 
     function initialize() {
         initializeDatepicker();
         initializeSelectbox();
+
         registerEvents();
     }
 

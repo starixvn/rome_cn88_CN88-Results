@@ -39,6 +39,10 @@ var normalResult =
             normalResult.isIe = parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))) < 10;
         }
 
+        if ($(".icon-filter-down").length) {
+            var toggleHandler = new ToggleHandler($);
+            toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "main-result"));
+        }
     },
     cacheElements: function () {
         normalResult.domElements.txtResultDate = $('#ResultDate');

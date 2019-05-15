@@ -2,6 +2,7 @@
 {
     using System.Web.Mvc;
     using Fanex.Products;
+    using Helpers;
     using Models.Views;
     using Services;
     using Sunplus.Agent.Model.Definitions;
@@ -10,10 +11,12 @@
     public class TabController : Controller
     {
         private readonly ICacheRefService cacheRefService;
+        private readonly BrowserHelper browserHelper;
 
-        public TabController(ICacheRefService cacheRefService)
+        public TabController(ICacheRefService cacheRefService, BrowserHelper browserHelper)
         {
             this.cacheRefService = cacheRefService;
+            this.browserHelper = browserHelper;
         }
 
         [ChildActionOnly]
@@ -28,7 +31,8 @@
                 isEnableNG2,
                 true,
                 UserPermission.IsEnableProduct(ProductIdConstants.BullFighting),
-                cacheRefService.GetProductName);
+                cacheRefService.GetProductName,
+                browserHelper);
 
             return PartialView(viewModel);
         }
