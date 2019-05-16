@@ -16,9 +16,7 @@
 <body class="ng2-container">
     <div id="page_main">
         <div class="container-fluid">
-            <ul class="nav nav-tabs" role="tablist">
-                @Html.Action("Index", "Tab", new { tabName = ViewContext.RouteData.Values["controller"], area = "" })
-            </ul>
+            @Html.Action("Index", "Tab", new { tabName = ViewContext.RouteData.Values["controller"], area = "" })
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active ng2">
                     <iframe src="@Model" scrolling="auto" marginwidth="0" marginheight="0" allowtransparency="yes" width="100%" height="100%" frameborder="0"></iframe>

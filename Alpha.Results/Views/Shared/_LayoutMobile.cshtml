@@ -19,9 +19,7 @@
         <div id="page_main">
             <div class="container-fluid">
                 <div class="">
-                    <ul class="nav nav-tabs" role="tablist">
-                        @Html.Action("Index", "Tab", new { tabName = ViewContext.RouteData.Values["controller"], area = "" })
-                    </ul>
+                    @Html.Action("Index", "Tab", new { tabName = ViewContext.RouteData.Values["controller"], area = "" })
                     <div class="tab-content">
                         @RenderBody()
                     </div>
