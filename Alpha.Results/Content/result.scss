@@ -219,7 +219,7 @@ table.fn-rs {
     .cl-ht-score, .cl-f-score {
         text-align: right;
     }
-    
+
     .cl-status .detail-link {
         line-height: 30px;
         display: inline-block;
@@ -451,7 +451,7 @@ body.keno iframe {
 }
 
 #detail-result-body table:not(.parlay) {
-    
+
     thead tr th, tr th {
         font-weight: normal;
     }
@@ -462,6 +462,6 @@ body.keno iframe {
     }
 }
 
-
-
-
+table.fn-rs-popup {
+    width: 100%;
+}

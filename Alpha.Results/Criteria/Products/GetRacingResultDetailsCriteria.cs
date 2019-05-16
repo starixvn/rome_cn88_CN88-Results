@@ -12,6 +12,7 @@ namespace Alpha.Results.Site.Criteria
         [SpParam(SqlParamName = "MatchID")]
         public int MatchId { get; set; }
 
+        [SpParam(Ignored = true)]
         public int? RaceNo { get; set; }
 
         public override string GetSettingKey()
