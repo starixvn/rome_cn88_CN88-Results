@@ -26,7 +26,7 @@
                 tabName,
                 UserPermission.EnableKeno,
                 isEnableNG2,
-                UserPermission.IsEnableProduct(ProductIdConstants.Lottery),
+                true,
                 UserPermission.IsEnableProduct(ProductIdConstants.BullFighting),
                 cacheRefService.GetProductName);
 
