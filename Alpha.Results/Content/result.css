@@ -315,6 +315,8 @@ table.fn-rs-popup {
   table,
   table.fn-rs tbody .cl-match {
     font-size: 10.5px; }
+  .container-fluid {
+    padding: 0; }
   .detail-result {
     padding: 12px; }
   .fn-rs-popup.parlay .sporttype {
@@ -329,4 +331,23 @@ table.fn-rs-popup {
     border: none;
     white-space: initial; }
   table.fn-rs .cl-ko-time {
-    width: 137px; } }
+    width: 137px; }
+  .tab-content {
+    padding-left: 12px;
+    padding-right: 12px; }
+    .tab-content .icon-excel {
+      display: none; }
+    .tab-content .filter .form-group {
+      margin-right: 0; }
+      .tab-content .filter .form-group .btn-submit {
+        width: 100%; }
+      .tab-content .filter .form-group .control.date {
+        width: 100%; }
+      .tab-content .filter .form-group .league-content, .tab-content .filter .form-group .sport-content {
+        width: 100%; }
+        .tab-content .filter .form-group .league-content .select2-container, .tab-content .filter .form-group .sport-content .select2-container {
+          width: 100% !important; }
+  #result-details .modal-dialog {
+    margin-top: 0; }
+  table.fn-rs .cl-result.home {
+    min-width: initial; } }

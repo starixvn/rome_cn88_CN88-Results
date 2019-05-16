@@ -32,10 +32,10 @@
         @using (Html.BeginForm("Index", "Outright", FormMethod.Get, new { id = "frm-outright" }))
         {
             <div>
-                <div class="form-group">
+                <div class="form-group from-date-box">
                     <label class="txt">@Resources.From</label>
                     <div class="control date">
-                        <div class="input-group date" id="dpk-fromdate">
+                        <div class="input-group date fromdate" id="dpk-fromdate">
                             <input class="form-control text-box single-line" data-val="true" data-val-date="The field FromDate must be a date." data-val-required="The FromDate field is required." id="FromDate" name="FromDate" readonly="readonly" type="datetime" value="@Model.FromDate.ToCN88ShortDateFormat()" />
                             <span class="input-group-addon">
                                 <span class="icon-calendar"></span>
@@ -43,10 +43,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
+                <div class="form-group to-date-box">
                     <label class="txt">@Resources.To</label>
                     <div class="control date">
-                        <div class="input-group date" id="dpk-todate">
+                        <div class="input-group date todate" id="dpk-todate">
                             <input class="form-control text-box single-line" data-val="true" data-val-date="The field ToDate must be a date." data-val-required="The ToDate field is required." id="ToDate" name="ToDate" readonly="readonly" type="datetime" value="@Model.ToDate.ToCN88ShortDateFormat()" />
                             <span class="input-group-addon">
                                 <span class="icon-calendar"></span>

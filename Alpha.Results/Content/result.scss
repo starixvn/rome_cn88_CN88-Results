@@ -467,12 +467,15 @@ table.fn-rs-popup {
     padding: 20px;
 }
 }
-@media (max-device-width: $screen-device-lower768),
-    (min-device-width: $screen-device-greater768) and (max-device-width: $screen-device-lower1024) and (orientation: landscape) {
+@media (max-device-width: $screen-device-lower768), (min-device-width: $screen-device-greater768) and (max-device-width: $screen-device-lower1024) and (orientation: landscape) {
     table,
     table.fn-rs tbody .cl-match {
         font-size: $font-size-mobile;
     }
+    .container-fluid {
+        padding: 0;
+    }
+
     .detail-result {
         padding: 12px;
     }
@@ -493,11 +496,46 @@ table.fn-rs-popup {
     #detail-result-body table:not(.parlay) tr th {
         border: none;
         white-space: initial;
-    }    
+    }
 
     table.fn-rs .cl-ko-time {
         width: 137px;
     }
+
+    .tab-content {
+        padding-left: 12px;
+        padding-right: 12px;
+
+        .icon-excel {
+            display: none;
+        }
+
+        .filter .form-group {
+            margin-right: 0;
+
+            .btn-submit {
+                width: 100%;
+            }
+
+            .control.date {
+                width: 100%;
+            }
+
+            .league-content, .sport-content {
+                width: 100%;
+
+                .select2-container {
+                    width: 100% !important;
+                }
+            }            
+        }
+    }
+
+    #result-details .modal-dialog {
+        margin-top: 0;
+    }
+
+    table.fn-rs .cl-result.home {
+        min-width: initial;
+    }
 }
-
-
