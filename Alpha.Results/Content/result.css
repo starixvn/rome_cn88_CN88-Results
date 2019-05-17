@@ -308,6 +308,7 @@ body.keno iframe {
 
 table.fn-rs-popup {
   width: 100%; }
+
 .detail-result {
   padding: 20px; }
 
@@ -350,4 +351,6 @@ table.fn-rs-popup {
   #result-details .modal-dialog {
     margin-top: 0; }
   table.fn-rs .cl-result.home {
-    min-width: initial; } }
+    min-width: initial; }
+  .ifr-result > body {
+    padding-top: 0; } }

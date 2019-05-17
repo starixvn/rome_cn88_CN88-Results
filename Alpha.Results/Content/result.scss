@@ -462,16 +462,18 @@ body.keno iframe {
 
 table.fn-rs-popup {
     width: 100%;
-    }
+}
+
 .detail-result {
     padding: 20px;
 }
-}
+
 @media (max-device-width: $screen-device-lower768), (min-device-width: $screen-device-greater768) and (max-device-width: $screen-device-lower1024) and (orientation: landscape) {
     table,
     table.fn-rs tbody .cl-match {
         font-size: $font-size-mobile;
     }
+
     .container-fluid {
         padding: 0;
     }
@@ -479,6 +481,7 @@ table.fn-rs-popup {
     .detail-result {
         padding: 12px;
     }
+
     .fn-rs-popup.parlay {
         .sporttype {
             text-align: left;
@@ -527,7 +530,7 @@ table.fn-rs-popup {
                 .select2-container {
                     width: 100% !important;
                 }
-            }            
+            }
         }
     }
 
@@ -537,5 +540,9 @@ table.fn-rs-popup {
 
     table.fn-rs .cl-result.home {
         min-width: initial;
+    }
+
+    .ifr-result > body {
+        padding-top: 0;
     }
 }
