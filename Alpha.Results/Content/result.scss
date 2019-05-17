@@ -545,4 +545,19 @@ table.fn-rs-popup {
     .ifr-result > body {
         padding-top: 0;
     }
+
+    .from-date-box .bootstrap-datetimepicker-widget.dropdown-menu {
+        right: 0 !important;
+        left: auto !important;
+
+        &:before {
+            left: auto;
+            right: 6px;
+        }
+
+        &:after {
+            left: auto;
+            right: 7px;
+        }
+    }
 }

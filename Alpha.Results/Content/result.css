@@ -353,4 +353,13 @@ table.fn-rs-popup {
   table.fn-rs .cl-result.home {
     min-width: initial; }
   .ifr-result > body {
-    padding-top: 0; } }
+    padding-top: 0; }
+  .from-date-box .bootstrap-datetimepicker-widget.dropdown-menu {
+    right: 0 !important;
+    left: auto !important; }
+    .from-date-box .bootstrap-datetimepicker-widget.dropdown-menu:before {
+      left: auto;
+      right: 6px; }
+    .from-date-box .bootstrap-datetimepicker-widget.dropdown-menu:after {
+      left: auto;
+      right: 7px; } }
