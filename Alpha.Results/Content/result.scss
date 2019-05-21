@@ -603,4 +603,17 @@ body.phone {
             min-width: 36px;
         }
     }
+
+    table.number-game {
+        .cl-warrior,
+        .cl-lblOEFT,
+        .cl-lbl1stball,
+        .cl-lastball {
+            min-width: 52px;
+        }
+
+        .cl-result {
+            min-width: 90px;
+        }
+    }
 }

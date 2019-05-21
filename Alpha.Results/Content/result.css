@@ -402,3 +402,12 @@ body.phone table.fn-rs .cl-totalpoint {
 
 body.phone table.fn-rs .cl-totalset {
   min-width: 36px; }
+
+body.phone table.number-game .cl-warrior,
+body.phone table.number-game .cl-lblOEFT,
+body.phone table.number-game .cl-lbl1stball,
+body.phone table.number-game .cl-lastball {
+  min-width: 52px; }
+
+body.phone table.number-game .cl-result {
+  min-width: 90px; }
