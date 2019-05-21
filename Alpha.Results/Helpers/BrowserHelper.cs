@@ -5,5 +5,7 @@
         bool IsMobile();
 
         bool IsTablet();
+
+        BrowserInfo GetBrowserInfo();
     }
 }

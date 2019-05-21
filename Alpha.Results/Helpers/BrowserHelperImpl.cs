@@ -2,7 +2,7 @@
 {
     using System.Text.RegularExpressions;
     using System.Web;
-
+   
     public class BrowserHelperImpl : BrowserHelper
     {
         private static Regex _mobileCheck = new Regex(@"ipad|playbook|tablet|kindle|nexus|android|(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino", RegexOptions.IgnoreCase | RegexOptions.Multiline | RegexOptions.Compiled);
@@ -50,5 +50,46 @@
 
             return false;
         }
+        public BrowserInfo GetBrowserInfo()
+                => new BrowserInfo(IsMobile(), IsTablet());
+    }
+
+    public static class BrowserManager
+    {
+        private static readonly BrowserHelper browserHelper = new BrowserHelperImpl();
+
+        public static BrowserInfo GetBrowserInfo()
+            => browserHelper.GetBrowserInfo();
+
+        public static string BuildMobileHtmlClass(bool isNoNeedClassAttr = false)
+        {
+            var browserInfo = GetBrowserInfo();
+
+            if (!browserInfo.IsMobile)
+            {
+                return string.Empty;
+            }
+
+            return string.Concat(
+                isNoNeedClassAttr ? string.Empty : "class=\"mobile",
+                browserInfo.IsPhone ? " phone" : string.Empty,
+                browserInfo.IsTablet ? " tablet" : string.Empty,
+                isNoNeedClassAttr ? string.Empty : "\"");
+        }
+    }
+
+    public class BrowserInfo
+    {
+        public BrowserInfo(bool isPhone, bool isTablet)
+        {
+            IsPhone = isPhone;
+            IsTablet = isTablet;
+        }
+
+        public bool IsMobile => IsPhone || IsTablet;
+
+        public bool IsPhone { get; }
+
+        public bool IsTablet { get; }
     }
 }
