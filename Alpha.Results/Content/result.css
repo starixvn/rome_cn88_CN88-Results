@@ -373,3 +373,32 @@ body.phone .from-date-box .bootstrap-datetimepicker-widget.dropdown-menu {
   body.phone .from-date-box .bootstrap-datetimepicker-widget.dropdown-menu:after {
     left: auto;
     right: 7px; }
+
+body.phone table.happy5 .cl-result {
+  min-width: 152px; }
+
+body.phone table.happy5 .cl-detail-result {
+  min-width: 34px; }
+
+body.phone table.fn-rs .cl-ko-time {
+  text-align: left;
+  white-space: nowrap !important; }
+
+body.phone table.fn-rs .cl-status {
+  min-width: 50px; }
+
+body.phone table.fn-rs .cl-ht-score,
+body.phone table.fn-rs .cl-f-score {
+  min-width: 56px; }
+
+body.phone table.fn-rs .cl-s,
+body.phone table.fn-rs .cl-ot,
+body.phone table.fn-rs .cl-ei {
+  min-width: 40px; }
+
+body.phone table.fn-rs .cl-totalgames,
+body.phone table.fn-rs .cl-totalpoint {
+  min-width: 42px; }
+
+body.phone table.fn-rs .cl-totalset {
+  min-width: 36px; }

@@ -561,4 +561,46 @@ body.phone {
             right: 7px;
         }
     }
+
+    
+    table.happy5 {
+        .cl-result {
+            min-width: 152px;
+        }
+
+        .cl-detail-result {
+            min-width: 34px;
+        }
+    }
+
+    table.fn-rs {
+        .cl-ko-time {
+            text-align: left;
+            white-space: nowrap !important;
+        }
+
+        .cl-status {
+            min-width: 50px;
+        }
+
+        .cl-ht-score,
+        .cl-f-score {
+            min-width: 56px;
+        }
+
+        .cl-s, 
+        .cl-ot, 
+        .cl-ei {
+            min-width: 40px;
+        }
+
+        .cl-totalgames,
+        .cl-totalpoint {
+            min-width: 42px;
+        }
+
+        .cl-totalset {
+            min-width: 36px;
+        }
+    }
 }
