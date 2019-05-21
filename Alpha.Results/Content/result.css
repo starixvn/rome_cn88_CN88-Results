@@ -312,54 +312,64 @@ table.fn-rs-popup {
 .detail-result {
   padding: 20px; }
 
-@media (max-device-width: 767px), (min-device-width: 768px) and (max-device-width: 1023px) and (orientation: landscape) {
-  table,
-  table.fn-rs tbody .cl-match {
-    font-size: 10.5px; }
-  .container-fluid {
-    padding: 0; }
-  .detail-result {
-    padding: 12px; }
-  .fn-rs-popup.parlay .sporttype {
-    text-align: left;
-    padding: 13px 0;
-    font-size: 10.5px; }
-  table.popup {
-    min-width: initial !important; }
-  #detail-result-body table:not(.parlay) tr td,
-  #detail-result-body table:not(.parlay) thead tr th,
-  #detail-result-body table:not(.parlay) tr th {
-    border: none;
-    white-space: initial; }
-  table.fn-rs .cl-ko-time {
-    width: 137px; }
-  .tab-content {
-    padding-left: 12px;
-    padding-right: 12px; }
-    .tab-content .icon-excel {
-      display: none; }
-    .tab-content .filter .form-group {
-      margin-right: 0; }
-      .tab-content .filter .form-group .btn-submit {
-        width: 100%; }
-      .tab-content .filter .form-group .control.date {
-        width: 100%; }
-      .tab-content .filter .form-group .league-content, .tab-content .filter .form-group .sport-content {
-        width: 100%; }
-        .tab-content .filter .form-group .league-content .select2-container, .tab-content .filter .form-group .sport-content .select2-container {
-          width: 100% !important; }
-  #result-details .modal-dialog {
-    margin-top: 0; }
-  table.fn-rs .cl-result.home {
-    min-width: initial; }
-  .ifr-result > body {
-    padding-top: 0; }
-  .from-date-box .bootstrap-datetimepicker-widget.dropdown-menu {
-    right: 0 !important;
-    left: auto !important; }
-    .from-date-box .bootstrap-datetimepicker-widget.dropdown-menu:before {
-      left: auto;
-      right: 6px; }
-    .from-date-box .bootstrap-datetimepicker-widget.dropdown-menu:after {
-      left: auto;
-      right: 7px; } }
+body.phone table,
+body.phone table.fn-rs tbody .cl-match {
+  font-size: 10.5px; }
+
+body.phone .container-fluid {
+  padding: 0; }
+
+body.phone .detail-result {
+  padding: 12px; }
+
+body.phone .fn-rs-popup.parlay .sporttype {
+  text-align: left;
+  padding: 13px 0;
+  font-size: 10.5px; }
+
+body.phone table.popup {
+  min-width: initial !important; }
+
+body.phone #detail-result-body table:not(.parlay) tr td,
+body.phone #detail-result-body table:not(.parlay) thead tr th,
+body.phone #detail-result-body table:not(.parlay) tr th {
+  border: none;
+  white-space: initial; }
+
+body.phone table.fn-rs .cl-ko-time {
+  width: 137px; }
+
+body.phone .tab-content {
+  padding-left: 12px;
+  padding-right: 12px; }
+  body.phone .tab-content .icon-excel {
+    display: none; }
+  body.phone .tab-content .filter .form-group {
+    margin-right: 0; }
+    body.phone .tab-content .filter .form-group .btn-submit {
+      width: 100%; }
+    body.phone .tab-content .filter .form-group .control.date {
+      width: 100%; }
+    body.phone .tab-content .filter .form-group .league-content, body.phone .tab-content .filter .form-group .sport-content {
+      width: 100%; }
+      body.phone .tab-content .filter .form-group .league-content .select2-container, body.phone .tab-content .filter .form-group .sport-content .select2-container {
+        width: 100% !important; }
+
+body.phone #result-details .modal-dialog {
+  margin-top: 0; }
+
+body.phone table.fn-rs .cl-result.home {
+  min-width: initial; }
+
+body.phone .ifr-result > body {
+  padding-top: 0; }
+
+body.phone .from-date-box .bootstrap-datetimepicker-widget.dropdown-menu {
+  right: 0 !important;
+  left: auto !important; }
+  body.phone .from-date-box .bootstrap-datetimepicker-widget.dropdown-menu:before {
+    left: auto;
+    right: 6px; }
+  body.phone .from-date-box .bootstrap-datetimepicker-widget.dropdown-menu:after {
+    left: auto;
+    right: 7px; }
