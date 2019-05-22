@@ -674,3 +674,9 @@ body.phone {
         }
     }
 }
+
+@media (min-width: 992px) {
+    .modal-lg {
+        width: 1000px;
+    }
+}
