@@ -369,12 +369,18 @@ body.phone {
     min-width: 152px; }
   body.phone table.happy5 .cl-detail-result {
     min-width: 34px; }
+  body.phone table.fn-rs.happy5 .cl-match {
+    word-break: break-all; }
+  body.phone table.fn-rs.popup .width-30 {
+    text-align: center; }
   body.phone table.fn-rs .cl-ko-time {
     text-align: left;
-    white-space: nowrap !important; }
+    white-space: nowrap !important;
+    width: 85px;
+    min-width: 85px; }
   body.phone table.fn-rs .cl-status {
-    min-width: 50px;
-    width: 50px; }
+    min-width: 70px;
+    width: 70px; }
   body.phone table.fn-rs .cl-place {
     min-width: 50px;
     width: 50px; }
@@ -396,8 +402,10 @@ body.phone {
     min-width: 42px; }
   body.phone table.fn-rs .cl-totalset {
     min-width: 36px; }
-  body.phone table.fn-rs.popup .width-30 {
-    text-align: center; }
+  body.phone table.fn-rs .cl-match {
+    width: 90px;
+    min-width: 90px;
+    padding-right: 0; }
   body.phone table.number-game .cl-warrior,
   body.phone table.number-game .cl-lblOEFT,
   body.phone table.number-game .cl-lbl1stball,

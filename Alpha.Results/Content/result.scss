@@ -578,14 +578,27 @@ body.phone {
     }
 
     table.fn-rs {
+        &.happy5 {
+            .cl-match {                
+                word-break: break-all;
+            }
+        }
+
+        &.popup {
+            .width-30 {
+                text-align: center;
+            }
+        }
         .cl-ko-time {
             text-align: left;
             white-space: nowrap !important;
+            width: 85px;
+            min-width: 85px;
         }
 
         .cl-status {
-            min-width: 50px;
-            width: 50px;
+            min-width: 70px;
+            width: 70px;
         }
 
         .cl-place {
@@ -621,13 +634,14 @@ body.phone {
 
         .cl-totalset {
             min-width: 36px;
-        }
+        }       
 
-        &.popup {
-            .width-30 {
-                text-align: center;
-            }
-        }
+        .cl-match {
+            width: 90px;
+            min-width: 90px;
+            //word-break: break-all;
+            padding-right: 0;
+        }        
     }
 
     table.number-game {
