@@ -416,7 +416,7 @@ body.phone {
   body.phone table.number-game .cl-lastball {
     min-width: 52px; }
   body.phone table.number-game .cl-result {
-    min-width: 90px; }
+    min-width: 104px; }
   body.phone .main-content {
     overflow-x: auto;
     display: block;
