@@ -61,7 +61,7 @@
 
         if ($(".icon-filter-down").length) {
             var toggleHandler = new ToggleHandler($);
-            toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "main-result", false, this.hideSelect2));
+            toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "main-result", true, hideSelect2));
         }
     }
 
