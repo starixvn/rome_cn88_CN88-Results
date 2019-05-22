@@ -41,7 +41,7 @@ var normalResult =
 
         if ($(".icon-filter-down").length) {
             var toggleHandler = new ToggleHandler($);
-            toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "main-result"));
+            toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "main-result", normalResult.hideSelect2));
         }
     },
     cacheElements: function () {
@@ -149,6 +149,9 @@ var normalResult =
 
                 iframe.attr('src', downloadUrl);
             });
+    },
+    hideSelect2: function () {
+        $(".select2-container--open").remove();
     }
 };
 

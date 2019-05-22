@@ -61,7 +61,7 @@
 
         if ($(".icon-filter-down").length) {
             var toggleHandler = new ToggleHandler($);
-            toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "main-result"));
+            toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "main-result", this.hideSelect2));
         }
     }
 
@@ -70,6 +70,10 @@
         initializeSelectbox();
 
         registerEvents();
+    }
+
+    function hideSelect2() {
+        $(".select2-container--open").remove();
     }
 
     initialize();
