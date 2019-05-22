@@ -309,6 +309,9 @@ body.keno iframe {
 table.fn-rs-popup {
   width: 100%; }
 
+table.fn-rs.popup .width-30 {
+  text-align: center; }
+
 .detail-result {
   padding: 20px; }
 
@@ -393,6 +396,8 @@ body.phone {
     min-width: 42px; }
   body.phone table.fn-rs .cl-totalset {
     min-width: 36px; }
+  body.phone table.fn-rs.popup .width-30 {
+    text-align: center; }
   body.phone table.number-game .cl-warrior,
   body.phone table.number-game .cl-lblOEFT,
   body.phone table.number-game .cl-lbl1stball,

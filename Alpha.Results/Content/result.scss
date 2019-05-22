@@ -464,6 +464,12 @@ table.fn-rs-popup {
     width: 100%;
 }
 
+table.fn-rs.popup {
+    .width-30 {
+        text-align: center;
+    }
+}
+
 .detail-result {
     padding: 20px;
 }
@@ -543,7 +549,7 @@ body.phone {
 
     table.fn-rs .cl-result.home {
         min-width: initial;
-    }   
+    }
 
     .from-date-box .bootstrap-datetimepicker-widget.dropdown-menu {
         right: 0 !important;
@@ -560,7 +566,7 @@ body.phone {
         }
     }
 
-    
+
     table.happy5 {
         .cl-result {
             min-width: 152px;
@@ -602,8 +608,8 @@ body.phone {
             min-width: 56px;
         }
 
-        .cl-s, 
-        .cl-ot, 
+        .cl-s,
+        .cl-ot,
         .cl-ei {
             min-width: 40px;
         }
@@ -615,6 +621,12 @@ body.phone {
 
         .cl-totalset {
             min-width: 36px;
+        }
+
+        &.popup {
+            .width-30 {
+                text-align: center;
+            }
         }
     }
 
@@ -638,7 +650,7 @@ body.phone {
         -webkit-overflow-scrolling: touch;
 
         table.fn-rs tbody td, table.fn-rs thead th {
-            box-sizing: border-box
+            box-sizing: border-box;
         }
     }
 }
