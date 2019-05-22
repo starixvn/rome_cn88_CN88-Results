@@ -423,3 +423,7 @@ body.phone {
     -webkit-overflow-scrolling: touch; }
     body.phone .main-content table.fn-rs tbody td, body.phone .main-content table.fn-rs thead th {
       box-sizing: border-box; }
+
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 1000px; } }
