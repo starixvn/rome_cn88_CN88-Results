@@ -316,7 +316,8 @@ table.fn-rs.popup .width-30 {
   padding: 20px; }
 
 body.phone {
-  padding-top: 0; }
+  padding-top: 0;
+  -webkit-text-size-adjust: 100%; }
   body.phone table,
   body.phone table.fn-rs tbody .cl-match {
     font-size: 10.5px; }
