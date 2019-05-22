@@ -548,7 +548,7 @@ body.phone {
         margin-top: 0;
     }
 
-    table.fn-rs .cl-result.home {
+    table.fn-rs .cl-result.home, table.fn-rs .cl-result.away {
         min-width: initial;
     }
 
@@ -642,7 +642,12 @@ body.phone {
             min-width: 90px;
             //word-break: break-all;
             padding-right: 0;
-        }        
+        }     
+        
+        .cl-result.away, .cl-result.home {
+            min-width: 50px;
+            width: 50px;
+        }   
     }
 
     table.number-game {

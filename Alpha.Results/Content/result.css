@@ -355,7 +355,7 @@ body.phone {
           width: 100% !important; }
   body.phone #result-details .modal-dialog {
     margin-top: 0; }
-  body.phone table.fn-rs .cl-result.home {
+  body.phone table.fn-rs .cl-result.home, body.phone table.fn-rs .cl-result.away {
     min-width: initial; }
   body.phone .from-date-box .bootstrap-datetimepicker-widget.dropdown-menu {
     right: 0 !important;
@@ -407,6 +407,9 @@ body.phone {
     width: 90px;
     min-width: 90px;
     padding-right: 0; }
+  body.phone table.fn-rs .cl-result.away, body.phone table.fn-rs .cl-result.home {
+    min-width: 50px;
+    width: 50px; }
   body.phone table.number-game .cl-warrior,
   body.phone table.number-game .cl-lblOEFT,
   body.phone table.number-game .cl-lbl1stball,
