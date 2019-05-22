@@ -11,7 +11,7 @@
 @if (Model.IsEnabledKenoTab)
 {
     <li role="presentation" class="@((Model.SelectedTabName == "keno") ? "active" : string.Empty)">
-        @Html.ActionLink(Resources.Keno, "index", "keno", null, new { id = "tabKeno" })
+        @Html.ActionLink(Resources.RNGKeno, "index", "keno", null, new { id = "tabKeno" })
     </li>
 }
 

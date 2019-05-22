@@ -202,4 +202,10 @@
   <data name="AccessDeny" xml:space="preserve">
     <value>You are not authorized on this function.</value>
   </data>
+  <data name="RNGKeno" xml:space="preserve">
+    <value>RNG Keno</value>
+  </data>
+  <data name="OpenRNGKenoResults" xml:space="preserve">
+    <value>Click here to open RNG Keno results</value>
+  </data>
 </root>

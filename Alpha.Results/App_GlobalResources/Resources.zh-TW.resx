@@ -198,4 +198,10 @@
   <data name="AccessDeny" xml:space="preserve">
     <value>您無權限使用此功能</value>
   </data>
+  <data name="RNGKeno" xml:space="preserve">
+    <value>快樂彩</value>
+  </data>
+  <data name="OpenRNGKenoResults" xml:space="preserve">
+    <value>Click here to open RNG Keno results</value>
+  </data>
 </root>
