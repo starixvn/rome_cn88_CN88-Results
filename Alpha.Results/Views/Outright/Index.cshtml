@@ -79,7 +79,7 @@
             }
         }
     </div>
-    <div class="main-content">
+    <div class="main-content" id="main-result">
         @Html.Raw(Model.HtmlResults)
     </div>
     <input data-val="true" data-val-date="The field MinResultDate must be a date." data-val-required="The MinResultDate field is required." id="MinResultDate" name="MinResultDate" type="hidden" value="@Model.MinResultDate.ToCN88ShortDateFormat()" />
