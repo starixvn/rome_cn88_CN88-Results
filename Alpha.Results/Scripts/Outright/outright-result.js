@@ -73,7 +73,8 @@
     }
 
     function hideSelect2() {
-        $(".select2-container--open").remove();
+        $('#SportType').select2("close");
+        $('#LeagueId').select2("close");
     }
 
     initialize();

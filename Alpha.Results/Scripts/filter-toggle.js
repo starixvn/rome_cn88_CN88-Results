@@ -1,6 +1,6 @@
 "use strict";
 var ToggleHandlerOption = /** @class */ (function () {
-    function ToggleHandlerOption(toggleIconId, sourceId, targetId, hideSourceElement, onClick) {
+    function ToggleHandlerOption(toggleIconId, sourceId, targetId, hideSourceElement, onHide) {
         if (toggleIconId === void 0) { toggleIconId = "toggleIconId"; }
         if (sourceId === void 0) { sourceId = "sourceId"; }
         if (targetId === void 0) { targetId = "targetId"; }
@@ -10,7 +10,7 @@ var ToggleHandlerOption = /** @class */ (function () {
         this.sourceId = sourceId;
         this.targetId = targetId;
         this.hideSourceElement = hideSourceElement;
-        this.onClick = onClick;
+        this.onHide = onHide;
     }
     return ToggleHandlerOption;
 }());
@@ -45,10 +45,10 @@ var ToggleHandler = /** @class */ (function () {
                     _this.$filterToggleIcon
                         .removeClass("icon-filter-up")
                         .addClass("icon-filter-down");
-                }
 
-                if (options.onClick) {
-                    options.onClick();
+                    if (options.onHide) {
+                        options.onHide();
+                    }
                 }
             });
         };

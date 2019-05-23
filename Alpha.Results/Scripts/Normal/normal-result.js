@@ -151,7 +151,8 @@ var normalResult =
             });
     },
     hideSelect2: function () {
-        $(".select2-container--open").remove();
+        normalResult.domElements.ddlSports.select2("close");
+        normalResult.domElements.ddlLeagues.select2("close");
     }
 };
 
