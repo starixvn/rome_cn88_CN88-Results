@@ -331,6 +331,8 @@ body.phone {
     font-size: 10.5px; }
   body.phone table.popup {
     min-width: initial !important; }
+  body.phone #detail-result-body {
+    background: #fff; }
   body.phone #detail-result-body table:not(.parlay) tr td,
   body.phone #detail-result-body table:not(.parlay) thead tr th,
   body.phone #detail-result-body table:not(.parlay) tr th {
@@ -423,6 +425,8 @@ body.phone {
     -webkit-overflow-scrolling: touch; }
     body.phone .main-content table.fn-rs tbody td, body.phone .main-content table.fn-rs thead th {
       box-sizing: border-box; }
+  body.phone .select2-search--dropdown .select2-search__field {
+    font-size: 16px; }
 
 @media (min-width: 992px) {
   .modal-lg {

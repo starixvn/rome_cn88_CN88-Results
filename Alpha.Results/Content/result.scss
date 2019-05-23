@@ -504,6 +504,10 @@ body.phone {
         min-width: initial !important;
     }
 
+    #detail-result-body {
+        background: #fff;
+    }
+
     #detail-result-body table:not(.parlay) tr td,
     #detail-result-body table:not(.parlay) thead tr th,
     #detail-result-body table:not(.parlay) tr th {
@@ -672,6 +676,10 @@ body.phone {
         table.fn-rs tbody td, table.fn-rs thead th {
             box-sizing: border-box;
         }
+    }
+
+    .select2-search--dropdown .select2-search__field {
+        font-size: 16px;
     }
 }
 
