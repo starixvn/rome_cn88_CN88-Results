@@ -20,6 +20,7 @@
     using Fanex.Result.ThirdParty.Services;
     using Fanex.Result.ThirdParty.Services.Impl;
     using Handlers;
+    using Helpers;
     using MediatR;
     using RestSharp;
     using Services;
@@ -82,6 +83,7 @@
 
         private static void RegisterServices(Container container)
         {
+            container.RegisterSingleton<BrowserHelper, BrowserHelperImpl>();
             container.RegisterPerWebRequest<IUserSession, UserSessionExt>();
             container.RegisterSingleton<IRemotingRefService, RemotingRefService>();
             container.RegisterSingleton<IRefDataHelper, RefDataHelper>();

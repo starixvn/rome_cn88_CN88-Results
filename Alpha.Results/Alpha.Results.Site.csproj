@@ -570,6 +570,7 @@
     <Content Include="Global.asax" />
     <Content Include="App_Data\Fanex.Result\Lucky3.xls" />
     <Content Include="Scripts\Bullfighting\index.js" />
+    <Content Include="Scripts\filter-toggle.js" />
     <Content Include="Scripts\PokerGames\index.js" />
     <Content Include="Scripts\Lottery\index.js" />
     <Content Include="Views\Lottery\Index.cshtml" />
@@ -633,6 +634,7 @@
     <Content Include="Views\ThirdParty\Index.cshtml" />
     <Content Include="Views\Bullfighting\Index.cshtml" />
     <Content Include="Views\PokerGames\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutMobile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs">
@@ -704,6 +706,8 @@
     <Compile Include="Handlers\OutrightResultHandler.cs" />
     <Compile Include="Handlers\PokerGamesHandler.cs" />
     <Compile Include="Handlers\ThirdPartyResultHandler.cs" />
+    <Compile Include="Helpers\BrowserHelper.cs" />
+    <Compile Include="Helpers\BrowserHelperImpl.cs" />
     <Compile Include="Helpers\DateTimeExtensions.cs" />
     <Compile Include="Helpers\UrlHelper.cs" />
     <Compile Include="Models\Actor.cs" />

@@ -153,8 +153,6 @@ table {
     font-size: $font-size;
 }
 
-
-
 table.fn-rs {
     min-width: unset;
 
@@ -464,4 +462,229 @@ body.keno iframe {
 
 table.fn-rs-popup {
     width: 100%;
+}
+
+table.fn-rs.popup {
+    .width-30 {
+        text-align: center;
+    }
+}
+
+.detail-result {
+    padding: 20px;
+}
+
+// For Phone
+body.phone {
+    padding-top: 0;
+    -webkit-text-size-adjust:100%;
+
+    table,
+    table.fn-rs tbody .cl-match {
+        font-size: $font-size-mobile;
+    }
+
+    .container-fluid {
+        padding: 0;
+    }
+
+    .detail-result {
+        padding: 12px;
+    }
+
+    .fn-rs-popup.parlay {
+        .sporttype {
+            text-align: left;
+            padding: 13px 0;
+            font-size: $font-size-mobile;
+        }
+    }
+
+    table.popup {
+        min-width: initial !important;
+    }
+
+    #detail-result-body {
+        background: #fff;
+    }
+
+    #detail-result-body table:not(.parlay) tr td,
+    #detail-result-body table:not(.parlay) thead tr th,
+    #detail-result-body table:not(.parlay) tr th {
+        border: none;
+        white-space: initial;
+    }
+
+    table.fn-rs .cl-ko-time {
+        width: 137px;
+    }
+
+    .tab-content {
+        padding-left: 12px;
+        padding-right: 12px;
+
+        .icon-excel {
+            display: none;
+        }
+
+        .filter .form-group {
+            margin-right: 0;
+
+            .btn-submit {
+                width: 100%;
+            }
+
+            .control.date {
+                width: 100%;
+            }
+
+            .league-content, .sport-content {
+                width: 100%;
+
+                .select2-container {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+
+    #result-details .modal-dialog {
+        margin-top: 0;
+    }
+
+    table.fn-rs .cl-result.home, table.fn-rs .cl-result.away {
+        min-width: initial;
+    }
+
+    .from-date-box .bootstrap-datetimepicker-widget.dropdown-menu {
+        right: 0 !important;
+        left: auto !important;
+
+        &:before {
+            left: auto;
+            right: 6px;
+        }
+
+        &:after {
+            left: auto;
+            right: 7px;
+        }
+    }
+
+
+    table.happy5 {
+        .cl-result {
+            min-width: 152px;
+        }
+
+        .cl-detail-result {
+            min-width: 34px;
+        }
+    }
+
+    table.fn-rs {
+        &.happy5 {
+            .cl-match {                
+                word-break: break-all;
+            }
+        }
+
+        &.popup {
+            .width-30 {
+                text-align: center;
+            }
+        }
+        .cl-ko-time {
+            text-align: left;
+            white-space: nowrap !important;
+            width: 85px;
+            min-width: 85px;
+        }
+
+        .cl-status {
+            min-width: 70px;
+            width: 70px;
+        }
+
+        .cl-place {
+            min-width: 50px;
+            width: 50px;
+        }
+
+        .cl-win {
+            min-width: 80px;
+            width: 80px;
+        }
+
+        .cl-race-name, .cl-race {
+            min-width: 80px;
+            width: 80px;
+        }
+
+        .cl-ht-score,
+        .cl-f-score {
+            min-width: 56px;
+        }
+
+        .cl-s,
+        .cl-ot,
+        .cl-ei {
+            min-width: 40px;
+        }
+
+        .cl-totalgames,
+        .cl-totalpoint {
+            min-width: 42px;
+        }
+
+        .cl-totalset {
+            min-width: 36px;
+        }       
+
+        .cl-match {
+            width: 90px;
+            min-width: 90px;
+            //word-break: break-all;
+            padding-right: 0;
+        }     
+        
+        .cl-result.away, .cl-result.home {
+            min-width: 50px;
+            width: 50px;
+        }   
+    }
+
+    table.number-game {
+        .cl-warrior,
+        .cl-lblOEFT,
+        .cl-lbl1stball,
+        .cl-lastball {
+            min-width: 52px;
+        }
+
+        .cl-result {
+            min-width: 104px;
+        }
+    }
+
+    .main-content {
+        //width: 100%;
+        overflow-x: auto;
+        display: block;
+        -webkit-overflow-scrolling: touch;
+
+        table.fn-rs tbody td, table.fn-rs thead th {
+            box-sizing: border-box;
+        }
+    }
+
+    .select2-search--dropdown .select2-search__field {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 992px) {
+    .modal-lg {
+        width: 1000px;
+    }
 }

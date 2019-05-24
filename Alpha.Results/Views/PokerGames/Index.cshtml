@@ -10,7 +10,7 @@
     <title>@Model.Title</title>
     @Styles.Render(BundleConfig.ThirdPartyResultStyleBundleUrl)
 </head>
-<body>
+<body @(Html.Raw(Alpha.Results.Site.Helpers.BrowserManager.BuildMobileHtmlClass()))>
     <div class="third-party-result">
         @{
             if (Model.IsSuccess)

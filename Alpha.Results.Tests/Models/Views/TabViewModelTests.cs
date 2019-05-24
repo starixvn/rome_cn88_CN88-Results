@@ -29,7 +29,7 @@
 
                 return string.Empty;
             };
-            var viewModel = new TabViewModel(tabName, false, false, false, false, getProductName);
+            var viewModel = new TabViewModel(tabName, false, false, false, false, getProductName, null);
             var expectedValue = "tabname";
 
             // Act
@@ -60,7 +60,7 @@
 
                 return string.Empty;
             };
-            var viewModel = new TabViewModel("test", false, false, false, isEnableBullfighting, getProductName);
+            var viewModel = new TabViewModel("test", false, false, false, isEnableBullfighting, getProductName, null);
 
             // Act
             var actualValue = viewModel.IsEnableBullfighting;

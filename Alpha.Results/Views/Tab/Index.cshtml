@@ -1,14 +1,17 @@
 ﻿@model TabViewModel
-<li role="presentation" class="@((Model.SelectedTabName == "normal") ? "active" : string.Empty)">
-    @Html.ActionLink(Resources.Event, "index", "normal", null, new { id = "tabNormal" })
-</li>
-<li role="presentation" class="@((Model.SelectedTabName == "outright") ? "active" : string.Empty)">
-    @Html.ActionLink(Resources.Outright, "index", "outright", null, new { id = "tabOutright" })
-</li>
+
+<ul class="nav @(Model.IsDevice ? "nav-tabs" : "nav-tabs-style2")" role="tablist">
+    <li role="presentation" class="@((Model.SelectedTabName == "normal") ? "active" : string.Empty)">
+        @Html.ActionLink(Resources.Event, "index", "normal", null, new { id = "tabNormal" })
+    </li>
+    <li role="presentation" class="@((Model.SelectedTabName == "outright") ? "active" : string.Empty)">
+        @Html.ActionLink(Resources.Outright, "index", "outright", null, new { id = "tabOutright" })
+    </li>
+    
 @if (Model.IsEnabledKenoTab)
 {
     <li role="presentation" class="@((Model.SelectedTabName == "keno") ? "active" : string.Empty)">
-        @Html.ActionLink(Resources.Keno, "index", "keno", null, new { id = "tabKeno" })
+        @Html.ActionLink(Resources.RNGKeno, "index", "keno", null, new { id = "tabKeno" })
     </li>
 }
 
@@ -18,3 +21,4 @@
         @Html.ActionLink(Model.GetProductName(Alpha.Results.Site.Constants.ProductIdConstants.Lottery), "index", "lottery", null, new { id = "tablottery" })
     </li>
 }
+</ul>

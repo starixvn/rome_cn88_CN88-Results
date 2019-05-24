@@ -9,6 +9,13 @@
 
     public class NormalResultViewModel
     {
+        private readonly BrowserHelper browserHelper;
+
+        public NormalResultViewModel()
+        {
+            browserHelper = new BrowserHelperImpl();
+        }
+
         public DateTime MinResultDate { get; set; }
 
         public string MinResultDateMessage
@@ -46,5 +53,7 @@
         public int LeagueId { get; set; }
 
         public string HtmlResults { get; set; }
+
+        public bool IsDevice => browserHelper.IsMobile() && !browserHelper.IsTablet();
     }
 }

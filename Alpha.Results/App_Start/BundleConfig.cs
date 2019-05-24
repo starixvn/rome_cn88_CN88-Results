@@ -34,12 +34,14 @@
         private static void RegisterNormalResultJavascript(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle(NormalResultJavascriptBundleUrl).Include(
+                        "~/Scripts/filter-toggle.js",
                         "~/Scripts/Normal/normal-result.js"));
         }
 
         private static void RegisterOutrightResultJavascript(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle(OutrightResultJavascriptBundleUrl).Include(
+                        "~/Scripts/filter-toggle.js",
                         "~/Scripts/Outright/outright-result.js"));
         }
 

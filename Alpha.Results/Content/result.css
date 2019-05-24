@@ -308,3 +308,126 @@ body.keno iframe {
 
 table.fn-rs-popup {
   width: 100%; }
+
+table.fn-rs.popup .width-30 {
+  text-align: center; }
+
+.detail-result {
+  padding: 20px; }
+
+body.phone {
+  padding-top: 0;
+  -webkit-text-size-adjust: 100%; }
+  body.phone table,
+  body.phone table.fn-rs tbody .cl-match {
+    font-size: 10.5px; }
+  body.phone .container-fluid {
+    padding: 0; }
+  body.phone .detail-result {
+    padding: 12px; }
+  body.phone .fn-rs-popup.parlay .sporttype {
+    text-align: left;
+    padding: 13px 0;
+    font-size: 10.5px; }
+  body.phone table.popup {
+    min-width: initial !important; }
+  body.phone #detail-result-body {
+    background: #fff; }
+  body.phone #detail-result-body table:not(.parlay) tr td,
+  body.phone #detail-result-body table:not(.parlay) thead tr th,
+  body.phone #detail-result-body table:not(.parlay) tr th {
+    border: none;
+    white-space: initial; }
+  body.phone table.fn-rs .cl-ko-time {
+    width: 137px; }
+  body.phone .tab-content {
+    padding-left: 12px;
+    padding-right: 12px; }
+    body.phone .tab-content .icon-excel {
+      display: none; }
+    body.phone .tab-content .filter .form-group {
+      margin-right: 0; }
+      body.phone .tab-content .filter .form-group .btn-submit {
+        width: 100%; }
+      body.phone .tab-content .filter .form-group .control.date {
+        width: 100%; }
+      body.phone .tab-content .filter .form-group .league-content, body.phone .tab-content .filter .form-group .sport-content {
+        width: 100%; }
+        body.phone .tab-content .filter .form-group .league-content .select2-container, body.phone .tab-content .filter .form-group .sport-content .select2-container {
+          width: 100% !important; }
+  body.phone #result-details .modal-dialog {
+    margin-top: 0; }
+  body.phone table.fn-rs .cl-result.home, body.phone table.fn-rs .cl-result.away {
+    min-width: initial; }
+  body.phone .from-date-box .bootstrap-datetimepicker-widget.dropdown-menu {
+    right: 0 !important;
+    left: auto !important; }
+    body.phone .from-date-box .bootstrap-datetimepicker-widget.dropdown-menu:before {
+      left: auto;
+      right: 6px; }
+    body.phone .from-date-box .bootstrap-datetimepicker-widget.dropdown-menu:after {
+      left: auto;
+      right: 7px; }
+  body.phone table.happy5 .cl-result {
+    min-width: 152px; }
+  body.phone table.happy5 .cl-detail-result {
+    min-width: 34px; }
+  body.phone table.fn-rs.happy5 .cl-match {
+    word-break: break-all; }
+  body.phone table.fn-rs.popup .width-30 {
+    text-align: center; }
+  body.phone table.fn-rs .cl-ko-time {
+    text-align: left;
+    white-space: nowrap !important;
+    width: 85px;
+    min-width: 85px; }
+  body.phone table.fn-rs .cl-status {
+    min-width: 70px;
+    width: 70px; }
+  body.phone table.fn-rs .cl-place {
+    min-width: 50px;
+    width: 50px; }
+  body.phone table.fn-rs .cl-win {
+    min-width: 80px;
+    width: 80px; }
+  body.phone table.fn-rs .cl-race-name, body.phone table.fn-rs .cl-race {
+    min-width: 80px;
+    width: 80px; }
+  body.phone table.fn-rs .cl-ht-score,
+  body.phone table.fn-rs .cl-f-score {
+    min-width: 56px; }
+  body.phone table.fn-rs .cl-s,
+  body.phone table.fn-rs .cl-ot,
+  body.phone table.fn-rs .cl-ei {
+    min-width: 40px; }
+  body.phone table.fn-rs .cl-totalgames,
+  body.phone table.fn-rs .cl-totalpoint {
+    min-width: 42px; }
+  body.phone table.fn-rs .cl-totalset {
+    min-width: 36px; }
+  body.phone table.fn-rs .cl-match {
+    width: 90px;
+    min-width: 90px;
+    padding-right: 0; }
+  body.phone table.fn-rs .cl-result.away, body.phone table.fn-rs .cl-result.home {
+    min-width: 50px;
+    width: 50px; }
+  body.phone table.number-game .cl-warrior,
+  body.phone table.number-game .cl-lblOEFT,
+  body.phone table.number-game .cl-lbl1stball,
+  body.phone table.number-game .cl-lastball {
+    min-width: 52px; }
+  body.phone table.number-game .cl-result {
+    min-width: 104px; }
+  body.phone .main-content {
+    overflow-x: auto;
+    display: block;
+    -webkit-overflow-scrolling: touch; }
+    body.phone .main-content table.fn-rs tbody td, body.phone .main-content table.fn-rs thead th {
+      box-sizing: border-box; }
+  body.phone .select2-search--dropdown .select2-search__field {
+    font-size: 16px; }
+
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 1000px; } }

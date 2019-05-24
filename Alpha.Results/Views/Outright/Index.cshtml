@@ -1,28 +1,41 @@
 ﻿@{
-    ViewBag.Title = "Outright";
+    ViewBag.Title = Resources.Results;
 }
 
 @*@section ComponentStyles
-{
-    <link href="/contents/components/datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
-}*@
+    {
+        <link href="/contents/components/datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    }*@
 
 @model OutrightResultViewModel
 
 @*@section styles
-{
-    <link href="/contents/components/select2/css/select2.min.css" rel="stylesheet" />
-}*@
+    {
+        <link href="/contents/components/select2/css/select2.min.css" rel="stylesheet" />
+    }*@
+
+@{
+    Layout = "~/Views/Shared/_LayoutMobile.cshtml";
+}
 
 <div role="tabpanel" class="tab-pane active" id="outright">
-    <div class="filter">
+    @if (Model.IsDevice)
+            {
+        <div class="page-title">
+            <div class="sub-title">
+                <span class="icon-filter-down" id="filter-toggle-icon"></span>
+            </div>
+        </div>
+    }
+
+    <div class="filter" id="report-form">
         @using (Html.BeginForm("Index", "Outright", FormMethod.Get, new { id = "frm-outright" }))
         {
             <div>
-                <div class="form-group">
+                <div class="form-group from-date-box">
                     <label class="txt">@Resources.From</label>
                     <div class="control date">
-                        <div class="input-group date" id="dpk-fromdate">
+                        <div class="input-group date fromdate" id="dpk-fromdate">
                             <input class="form-control text-box single-line" data-val="true" data-val-date="The field FromDate must be a date." data-val-required="The FromDate field is required." id="FromDate" name="FromDate" readonly="readonly" type="datetime" value="@Model.FromDate.ToCN88ShortDateFormat()" />
                             <span class="input-group-addon">
                                 <span class="icon-calendar"></span>
@@ -30,10 +43,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
+                <div class="form-group to-date-box">
                     <label class="txt">@Resources.To</label>
                     <div class="control date">
-                        <div class="input-group date" id="dpk-todate">
+                        <div class="input-group date todate" id="dpk-todate">
                             <input class="form-control text-box single-line" data-val="true" data-val-date="The field ToDate must be a date." data-val-required="The ToDate field is required." id="ToDate" name="ToDate" readonly="readonly" type="datetime" value="@Model.ToDate.ToCN88ShortDateFormat()" />
                             <span class="input-group-addon">
                                 <span class="icon-calendar"></span>
@@ -66,7 +79,7 @@
             }
         }
     </div>
-    <div class="main-content">
+    <div class="main-content" id="main-result">
         @Html.Raw(Model.HtmlResults)
     </div>
     <input data-val="true" data-val-date="The field MinResultDate must be a date." data-val-required="The MinResultDate field is required." id="MinResultDate" name="MinResultDate" type="hidden" value="@Model.MinResultDate.ToCN88ShortDateFormat()" />

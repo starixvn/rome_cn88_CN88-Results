@@ -206,6 +206,15 @@ namespace Alpha.Results.Site.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Click here to open RNG Keno results.
+        /// </summary>
+        public static string OpenRNGKenoResults {
+            get {
+                return ResourceManager.GetString("OpenRNGKenoResults", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Outright.
         /// </summary>
         public static string Outright {
@@ -238,6 +247,15 @@ namespace Alpha.Results.Site.App_GlobalResources {
         public static string Results {
             get {
                 return ResourceManager.GetString("Results", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RNG Keno.
+        /// </summary>
+        public static string RNGKeno {
+            get {
+                return ResourceManager.GetString("RNGKeno", resourceCulture);
             }
         }
         

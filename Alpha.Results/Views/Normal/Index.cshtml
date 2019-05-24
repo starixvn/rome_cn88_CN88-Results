@@ -1,19 +1,31 @@
 ﻿@{
-    ViewBag.Title = "Normal";
+    ViewBag.Title = Resources.Results;
 }
 
 @model NormalResultViewModel
 
+@{
+    Layout = "~/Views/Shared/_LayoutMobile.cshtml";
+}
 
 <div role="tabpanel" class="tab-pane active" id="normal">
-    <div class="filter">
+    @if (Model.IsDevice)
+            {
+        <div class="page-title">
+            <div class="sub-title">
+                <span class="icon-filter-down" id="filter-toggle-icon"></span>
+            </div>
+        </div>
+    }
+
+    <div class="filter" id="report-form">
         @using (Html.BeginForm("Index", "Normal", FormMethod.Get, new { @id = "result-filter" }))
         {
             <div class="main-option">
-                <div class="form-group">
+                <div class="form-group from-date-box">
                     <label class="txt">@Resources.Date</label>
                     <div class="control date">
-                        <div class="input-group date" id="dpkContainer">
+                        <div class="input-group date fromdate" id="dpkContainer">
                             <input class="form-control text-box single-line" data-val="true" data-val-date="The field ResultDate must be a date." data-val-required="The ResultDate field is required." id="ResultDate" name="ResultDate" readonly="readonly" type="datetime" value="@Model.ResultDate.ToCN88ShortDateFormat()">
                             <span class="input-group-addon">
                                 <span class="icon-calendar"></span>

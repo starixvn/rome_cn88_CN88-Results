@@ -2,6 +2,7 @@
 $goal-icon: "images/goal-icon.png";
 $primary-color: #666;
 $font-size: 13px;
+$font-size-mobile: 10.5px;
 $font-family: Arial, Tahoma,helvetica,sans-serif;
 $text-color: #3b3b3b;
 $link-color: #0072bb;
@@ -16,3 +17,9 @@ $table-border-color: #e5e5e5;
 $table-even-bg-color: #eaeaed;
 
 $detail-result-border-color: #cbc9ca;
+
+// Devices 
+$screen-device-lower768: 767px;
+$screen-device-greater768: 768px;
+$screen-device-greater1024: 1024px;
+$screen-device-lower1024: 1023px;

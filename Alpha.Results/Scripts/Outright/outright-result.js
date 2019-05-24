@@ -58,12 +58,23 @@
 
             iframe.attr('src', downloadUrl);
         });
+
+        if ($(".icon-filter-down").length) {
+            var toggleHandler = new ToggleHandler($);
+            toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "main-result", true, hideSelect2));
+        }
     }
 
     function initialize() {
         initializeDatepicker();
         initializeSelectbox();
+
         registerEvents();
+    }
+
+    function hideSelect2() {
+        $('#SportType').select2("close");
+        $('#LeagueId').select2("close");
     }
 
     initialize();

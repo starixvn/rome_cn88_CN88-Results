@@ -39,6 +39,10 @@ var normalResult =
             normalResult.isIe = parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))) < 10;
         }
 
+        if ($(".icon-filter-down").length) {
+            var toggleHandler = new ToggleHandler($);
+            toggleHandler.render(new ToggleHandlerOption("filter-toggle-icon", "report-form", "main-result", true, normalResult.hideSelect2));
+        }
     },
     cacheElements: function () {
         normalResult.domElements.txtResultDate = $('#ResultDate');
@@ -145,6 +149,10 @@ var normalResult =
 
                 iframe.attr('src', downloadUrl);
             });
+    },
+    hideSelect2: function () {
+        normalResult.domElements.ddlSports.select2("close");
+        normalResult.domElements.ddlLeagues.select2("close");
     }
 };
 
