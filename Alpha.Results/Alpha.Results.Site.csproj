@@ -435,6 +435,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\SPNames\Dev\Results.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Content\Fanex.Result\Allbet\css\button.css" />
     <Content Include="Content\Fanex.Result\Allbet\css\images\layout\btn_UI04.png" />
     <Content Include="Content\Fanex.Result\Allbet\css\images\layout\icon_UI02.png" />
