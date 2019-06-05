@@ -53,7 +53,8 @@
 
             RefDataTypeContainer
                 .ConnectTo(new Uri(AppSettings.RemoteRefURL))
-                .FromApplication("Alpha.Results.Site");
+                .FromApplication("Alpha.Results.Site")
+                .RegisterSupportedLanguages("en-US", "zh-Hans", "zh-TW");
             ResultCoreManager.RegisterRefDataHelper(new RefDataHelper());
         }
 
