@@ -172,13 +172,13 @@
     <value>没有数据</value>
   </data>
   <data name="OpenKenoResults" xml:space="preserve">
-    <value>Click here to open Keno results</value>
+    <value>点击此处开启快乐彩赛果</value>
   </data>
   <data name="Lottery" xml:space="preserve">
     <value>Lottery</value>
   </data>
   <data name="OpenLotteryResults" xml:space="preserve">
-    <value>Click here to open Lottery results</value>
+    <value>点击此处开启彩票赛果</value>
   </data>
   <data name="Bullfighting" xml:space="preserve">
     <value>Bullfighting</value>
