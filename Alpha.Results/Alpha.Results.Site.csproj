@@ -654,6 +654,7 @@
     </Compile>
     <Compile Include="Configurations\AppSettings.cs" />
     <Compile Include="Constants\BetTypeIdConstants.cs" />
+    <Compile Include="Constants\LanguageKeyConstants.cs" />
     <Compile Include="Constants\ProductIdConstants.cs" />
     <Compile Include="Constants\RoleIdConstants.cs" />
     <Compile Include="Constants\SportTypeIdConstants.cs" />

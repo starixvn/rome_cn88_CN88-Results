@@ -15,7 +15,9 @@
                 "{0}game/keno/kenoresult/resultdetail?date={1}&language={2}&productId={4}&customerid={3}",
                 message.RootPath,
                 DateTime.Today.ToString("yyyyMMdd"),
-                message.LanguageKey,
+                message.LanguageKey.Equals(LanguageKeyConstants.NewChineseSimplified, StringComparison.OrdinalIgnoreCase)
+                    ? LanguageKeyConstants.ChineseSimplified
+                    : message.LanguageKey,
                 message.CustId,
                 ProductIdConstants.Lottery);
 
