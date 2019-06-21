@@ -34,5 +34,6 @@
     <Setting Key="Age_CustomerStatusSel" SpName="Age_CustomerStatusSel" DbName="DBAGE.bodb02.BODBDownlineNetView" Plain="0" />
     <Setting Key="Age_ReCheckin" SpName="Age_ReCheckin" DbName="DBONUSER.ON_USER.BODBDownlineNetView" Plain="0" />
     <Setting Key="CS_CustomerStatusSel" SpName="CS_CustomerStatusSel" DbName="DBCust.CustDB.BODBDownlineNetView" Plain="0" />
+    <Setting Key="Age_CheckOut" SpName="CS_CheckOut" DbName="DBONUSER.ON_USER.BODBDownlineNetView" Plain="0" />
   </Function>
 </Functions>
