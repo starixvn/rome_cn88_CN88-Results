@@ -145,7 +145,7 @@
     <value>到</value>
   </data>
   <data name="Submit" xml:space="preserve">
-    <value>保存</value>
+    <value>提交</value>
   </data>
   <data name="ExportToExcel" xml:space="preserve">
     <value>導出Excel</value>
