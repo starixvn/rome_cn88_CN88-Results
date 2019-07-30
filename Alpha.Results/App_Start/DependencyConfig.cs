@@ -5,6 +5,7 @@
     using System.Diagnostics.CodeAnalysis;
     using System.Reflection;
     using System.Web.Mvc;
+    using CN88.Web.Helpers;
     using DataAccesses;
     using DataAccesses.Impl;
     using Fanex.Data.Repository;
@@ -20,7 +21,6 @@
     using Fanex.Result.ThirdParty.Services;
     using Fanex.Result.ThirdParty.Services.Impl;
     using Handlers;
-    using Helpers;
     using MediatR;
     using RestSharp;
     using Services;

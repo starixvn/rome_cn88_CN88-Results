@@ -3,7 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Web.Mvc;
-    using Helpers;
+    using CN88.Web.Helpers;
 
     public class OutrightResultViewModel
     {
@@ -38,6 +38,6 @@
 
         public string HtmlResults { get; set; }
 
-        public bool IsDevice => browserHelper.IsMobile() && !browserHelper.IsTablet();
+        public bool IsDevice => browserHelper.IsMobile();
     }
 }

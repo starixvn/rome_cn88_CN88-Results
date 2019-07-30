@@ -1,7 +1,7 @@
 ﻿namespace Alpha.Results.Site.Models.Views
 {
     using System;
-    using Helpers;
+    using CN88.Web.Helpers;
 
     public class TabViewModel
     {
@@ -44,6 +44,6 @@
 
         public Func<int, string> GetProductName { get; }
 
-        public bool IsDevice => browserHelper.IsMobile() && !browserHelper.IsTablet();
+        public bool IsDevice => browserHelper.IsMobile();
     }
 }

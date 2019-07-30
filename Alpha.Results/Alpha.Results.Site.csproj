@@ -63,7 +63,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="CN88.Web, Version=1.0.1.5, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CN88.Web.1.0.1.5-subacc02\lib\net461\CN88.Web.dll</HintPath>
+      <HintPath>..\packages\CN88.Web.1.0.1.5-subacc03\lib\net461\CN88.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Couchbase, Version=1.2.6.0, Culture=neutral, PublicKeyToken=05e9c6b5a9ec94c2, processorArchitecture=MSIL">
@@ -705,8 +705,6 @@
     <Compile Include="Handlers\OutrightResultHandler.cs" />
     <Compile Include="Handlers\PokerGamesHandler.cs" />
     <Compile Include="Handlers\ThirdPartyResultHandler.cs" />
-    <Compile Include="Helpers\BrowserHelper.cs" />
-    <Compile Include="Helpers\BrowserHelperImpl.cs" />
     <Compile Include="Helpers\DateTimeExtensions.cs" />
     <Compile Include="Helpers\UrlHelper.cs" />
     <Compile Include="Models\Actor.cs" />
