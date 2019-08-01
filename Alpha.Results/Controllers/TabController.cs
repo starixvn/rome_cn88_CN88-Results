@@ -1,8 +1,8 @@
 ﻿namespace Alpha.Results.Site.Controllers
 {
     using System.Web.Mvc;
+    using CN88.Web.Helpers;
     using Fanex.Products;
-    using Helpers;
     using Models.Views;
     using Services;
     using Sunplus.Agent.Model.Definitions;

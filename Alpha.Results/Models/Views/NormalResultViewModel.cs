@@ -3,8 +3,9 @@
     using System;
     using System.Collections.Generic;
     using System.Web.Mvc;
-    using Alpha.Results.Site.Helpers;
     using App_GlobalResources;
+    using CN88.Web.Helpers;
+    using Helpers;
     using Utils;
 
     public class NormalResultViewModel
@@ -54,6 +55,6 @@
 
         public string HtmlResults { get; set; }
 
-        public bool IsDevice => browserHelper.IsMobile() && !browserHelper.IsTablet();
+        public bool IsDevice => browserHelper.IsMobile();
     }
 }
