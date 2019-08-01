@@ -12,7 +12,7 @@
   
     @Styles.Render(BundleConfig.ResultCoreStyleBundleUrl)
 </head>
-<body @(Html.Raw(Alpha.Results.Site.Helpers.BrowserManager.BuildMobileHtmlClass()))>
+<body @(Html.Raw(CN88.Web.Helpers.BrowserManager.BuildMobileHtmlClass()))>
     <div class="detail-result" id="detail-result-body">
         @Html.Raw(Model.HtmlResults)
     </div>
