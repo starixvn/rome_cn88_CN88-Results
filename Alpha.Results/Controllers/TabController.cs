@@ -7,6 +7,7 @@
     using Services;
     using Sunplus.Agent.Model.Definitions;
     using Sunplus.Agent.Model.Entities.Permission;
+    using System.Configuration;
 
     public class TabController : Controller
     {
@@ -22,15 +23,12 @@
         [ChildActionOnly]
         public ActionResult Index(string tabName = "Normal")
         {
-            var product = ProductManager.GetProduct(ProductIdConstants.NG2);
-            var isEnableNG2 = product != null && product.ShowSettings;
-
             var viewModel = new TabViewModel(
                 tabName,
-                UserPermission.EnableKeno,
-                isEnableNG2,
-                true,
-                UserPermission.IsEnableProduct(ProductIdConstants.BullFighting),
+                ConfigurationManager.AppSettings["EnableProduct-8"] == "1",
+                false,
+                ConfigurationManager.AppSettings["EnableProduct-28"] == "1",
+                false,
                 cacheRefService.GetProductName,
                 browserHelper);
 
