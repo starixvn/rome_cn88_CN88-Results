@@ -2,25 +2,26 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics;
+    using System.Reflection;
     using System.Web.Mvc;
     using System.Web.Optimization;
     using System.Web.Routing;
     using App_Start;
-    using CN88.Features.Site.App_Start;
     using CN88.Web.Filters;
+    using CN88.Web.Helpers;
     using Configurations;
     using Fanex.Data;
     using Fanex.Data.CrossCutting.WrappingException;
     using Fanex.Data.OldConnectionStringProvider;
+    using Fanex.Logging.Extensions.Database;
     using Fanex.Logging.Extensions.Web;
     using Fanex.RemotingRef;
     using Fanex.Result.Core.Base;
     using Fanex.Result.Core.RemotingRef;
+    using Logging;
     using ONEbook.UM.Filters;
     using Sunplus.Agent.Model.Entities;
-    using Web;
-    using Web.Filters;
-    using Web.Helpers;
 
     public class MvcApplication : System.Web.HttpApplication
     {
@@ -33,7 +34,9 @@
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            LoggingManager.Init();
+
+            var sensitivteInfo = new[] { "password", "seccode", "securitycode" };
+            LoggingConfig.Init(sensitivteInfo, DatabaseInfoGetters.GetDbExceptionInfo);
             DependencyConfig.Init();
 
             DbSettingProviderManager
@@ -44,12 +47,12 @@
                 .Run();
 
             ShareSession.Init();
-            StaticResources.Init(StaticResources.GetBuildVersion());
+            StaticResources.Init(GetBuildVersion());
 
             GlobalFilters.Filters.Add(new CheckUMFilter());
             GlobalFilters.Filters.Add(new AfterLoginFlowFilter());
             GlobalFilters.Filters.Add(new CheckBelongingFilter());
-            GlobalFilters.Filters.Add(new NoCacheFilter());
+            GlobalFilters.Filters.Add(new NoCacheFilterAttribute());
 
             RefDataTypeContainer
                 .ConnectTo(new Uri(AppSettings.RemoteRefURL))
@@ -79,6 +82,14 @@
                     ["SubAccountName"] = currentCustomer?.SubUserName,
                     ["AdminName"] = currentCustomer?.AdminName
                 });
+        }
+
+        private static string GetBuildVersion()
+        {
+            Assembly assembly = Assembly.GetCallingAssembly();
+            FileVersionInfo versionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
+
+            return versionInfo.FileVersion;
         }
     }
 }

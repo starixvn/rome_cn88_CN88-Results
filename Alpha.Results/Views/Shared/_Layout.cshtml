@@ -4,15 +4,11 @@
     <meta name="viewport" content="width=device-width" />
     <title>@Html.Raw(ViewBag.Title)</title>
     <link href="" rel="stylesheet" />
-    @Alpha.Web.Helpers.StaticResources.AssetStyles.Render("/bundles/common/common")
-    @Alpha.Web.Helpers.StaticResources.AssetStyles.Render("/bundles/site-results/default")
-
+    @CN88.Web.Helpers.StaticResources.AssetStyles.Render("/bundles/common/common")
+    @CN88.Web.Helpers.StaticResources.AssetStyles.Render("/bundles/site-results/default")
     @RenderSection("ComponentStyles", false)
-
     @Styles.Render(BundleConfig.ResultCoreStyleBundleUrl)
-
     @RenderSection("Styles", false)
-
 </head>
 <body @(Html.Raw(CN88.Web.Helpers.BrowserManager.BuildMobileHtmlClass()))>
     <div id="page_main">
@@ -27,13 +23,8 @@
             </div>
         </div>
     </div>
-
     @Html.Hidden("RootURL", HttpContext.Current.Response.ApplyAppPathModifier("~/"))
-
-    @Alpha.Web.Helpers.StaticResources.AssetScripts.Render("/bundles/site-results/default")
-
+    @CN88.Web.Helpers.StaticResources.AssetScripts.Render("/bundles/site-results/default")
     @RenderSection("Scripts", false)
-
-    @Alpha.Web.Helpers.GoogleAnalyticHepler.Render()
 </body>
 </html>

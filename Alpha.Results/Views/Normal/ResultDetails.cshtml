@@ -1,5 +1,4 @@
 ﻿@model NormalDetailViewModel
-
 @{
     ViewBag.Title = Model.Title;
     Layout = null;
@@ -9,13 +8,11 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@Html.Raw(ViewBag.Title)</title>
-  
     @Styles.Render(BundleConfig.ResultCoreStyleBundleUrl)
 </head>
 <body @(Html.Raw(CN88.Web.Helpers.BrowserManager.BuildMobileHtmlClass()))>
     <div class="detail-result" id="detail-result-body">
         @Html.Raw(Model.HtmlResults)
     </div>
-    @Alpha.Web.Helpers.GoogleAnalyticHepler.Render()
 </body>
 </html>
