@@ -63,11 +63,11 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="CN88.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CN88.Common.1.0.0-beta2\lib\net461\CN88.Common.dll</HintPath>
+      <HintPath>..\packages\CN88.Common.1.0.0\lib\net461\CN88.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="CN88.Web, Version=1.0.1.6, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CN88.Web.1.0.1.6-ProblemAccounts-05\lib\net461\CN88.Web.dll</HintPath>
+      <HintPath>..\packages\CN88.Web.1.0.1.6\lib\net461\CN88.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Couchbase, Version=1.2.6.0, Culture=neutral, PublicKeyToken=05e9c6b5a9ec94c2, processorArchitecture=MSIL">

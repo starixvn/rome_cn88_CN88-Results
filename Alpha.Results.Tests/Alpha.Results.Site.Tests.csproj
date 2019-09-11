@@ -43,11 +43,11 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="CN88.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CN88.Common.1.0.0-beta2\lib\net461\CN88.Common.dll</HintPath>
+      <HintPath>..\packages\CN88.Common.1.0.0\lib\net461\CN88.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="CN88.Web, Version=1.0.1.6, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CN88.Web.1.0.1.6-ProblemAccounts-05\lib\net461\CN88.Web.dll</HintPath>
+      <HintPath>..\packages\CN88.Web.1.0.1.6\lib\net461\CN88.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Dapper, Version=1.50.5.0, Culture=neutral, processorArchitecture=MSIL">
@@ -90,8 +90,8 @@
       <HintPath>..\packages\Fanex.Logging.Extensions.1.0.6\lib\net461\Fanex.Logging.Extensions.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Fanex.Logging.Extensions.Web, Version=1.0.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Logging.Extensions.Web.1.0.7\lib\net461\Fanex.Logging.Extensions.Web.dll</HintPath>
+    <Reference Include="Fanex.Logging.Extensions.Web, Version=1.0.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Logging.Extensions.Web.1.0.8\lib\net461\Fanex.Logging.Extensions.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Fanex.Logging.RabbitMQ, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
