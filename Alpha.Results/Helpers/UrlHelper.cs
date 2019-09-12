@@ -2,8 +2,8 @@
 {
     using System;
     using System.Web;
+    using CN88.Web.Helpers;
     using Configurations;
-    using Web.Helpers;
 
     public static class UrlHelper
     {
