@@ -56,3 +56,10 @@ table.happy5 .cl-result {
 table.happy5 .cl-detail-result {
   width: 70px;
 }
+table.badminton .cl-result.home {
+    color: #6678e0;
+}
+
+table.badminton .cl-result.away {
+    color: #008d95;
+}
