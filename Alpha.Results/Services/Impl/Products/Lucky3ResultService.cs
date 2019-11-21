@@ -74,7 +74,7 @@
 
             var resultSetting = new ResultSetting
             {
-                SportType = SportType.Lucky3,
+                //SportType = SportType.Lucky3,
                 IsOutright = false,
                 IsParlayPopUp = false,
                 IsPopUp = true,
