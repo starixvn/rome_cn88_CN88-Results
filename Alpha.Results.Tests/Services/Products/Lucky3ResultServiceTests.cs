@@ -93,8 +93,7 @@
             resultEngineAdapter.Received().HtmlParser(
                 Arg.Any<IList<Lucky3>>(),
                 Arg.Is<ResultSetting>(
-                resultSetting => resultSetting.SportType == SportType.Lucky3
-                                && !resultSetting.IsOutright
+                resultSetting => !resultSetting.IsOutright
                                 && !resultSetting.IsParlayPopUp
                                 && resultSetting.IsPopUp
                                 && !resultSetting.VisiblePopUpTitle
@@ -149,8 +148,7 @@
             resultEngineAdapter.Received().HtmlParser(
                 Arg.Any<IList<Lucky3>>(),
                 Arg.Is<ResultSetting>(
-                    resultSetting => resultSetting.SportType == SportType.Lucky3
-                                    && resultSetting.LanguageCode == request.Language
+                    resultSetting => resultSetting.LanguageCode == request.Language
                                     && resultSetting.VisibleDetailedLink
                                     && resultSetting.VisibleFreeHeader
                                     && !resultSetting.VisibleMatchCodeIDColumn
@@ -203,8 +201,7 @@
             resultEngineAdapter.Received().ExcelParser(
                 Arg.Any<IList<Lucky3>>(),
                 Arg.Is<ResultSetting>(
-                    resultSetting => resultSetting.SportType == SportType.Lucky3
-                                    && resultSetting.LanguageCode == request.Language
+                    resultSetting => resultSetting.LanguageCode == request.Language
                                     && resultSetting.ExcelTitle == request.ExcelTitle
                                     && resultSetting.ExcelTemplatePath == request.TemplatePath
                                     && !resultSetting.VisibleMatchCodeIDColumn
