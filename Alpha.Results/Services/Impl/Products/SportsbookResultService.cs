@@ -136,7 +136,8 @@
                 SportType.Tennis,
                 SportType.BasketBall,
                 SportType.VirtualBasketBall,
-                SportType.ESport
+                SportType.ESport,
+                SportType.Badminton
             };
 
             return sportHasDetail.Contains(sportType);
