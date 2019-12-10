@@ -52,7 +52,6 @@
                 VisibleFreeHeader = true,
                 VisibleMatchCodeIDColumn = false,
                 HighlightWinnerTeam = true,
-                EnableCheckScoreCalculated = true,
                 DateTimeFormat = "{0:yyyy-MM-dd<br/>HH:mm:ss}"
             };
 
@@ -72,7 +71,6 @@
                 ExcelTemplatePath = request.TemplatePath,
                 VisibleMatchCodeIDColumn = false,
                 HighlightWinnerTeam = true,
-                EnableCheckScoreCalculated = true,
                 DateTimeFormat = "{0:yyyy-MM-dd<br/>HH:mm:ss}"
             };
 
@@ -118,7 +116,6 @@
                 LanguageCode = detailsRequest.Language,
                 VisibleMatchCodeIDColumn = false,
                 HighlightWinnerTeam = true,
-                EnableCheckScoreCalculated = true,
                 DateTimeFormat = "{0:yyyy-MM-dd<br/>HH:mm:ss}"
             };
 
