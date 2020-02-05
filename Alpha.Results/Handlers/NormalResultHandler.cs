@@ -107,6 +107,7 @@
             Check.Argument.IsNotNull(message, "message");
 
             var sportName = _cacheRefService.GetSportName(message.SportId);
+            sportName = string.IsNullOrWhiteSpace(sportName) ? string.Empty : $"{sportName} - ";
 
             var leagueName = message.LeagueId > 0
                 ? _cacheRefService.GetLeagueName(message.LeagueId)
@@ -114,7 +115,7 @@
 
             var viewModel = new NormalDetailViewModel
             {
-                Title = $"{sportName} - {leagueName}",
+                Title = $"{sportName}{leagueName}",
                 HtmlResults = _normalResultService.GetResultDetails(message)
             };
 
