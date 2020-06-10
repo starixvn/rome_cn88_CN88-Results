@@ -38,6 +38,7 @@ namespace Alpha.Results.Site.Services.Impl.Products
 
             var resultSetting = new ResultSetting
             {
+                IsPopupOpenFromBetList = detailsRequest.IsViewResultFromBetList,
                 IsOutright = false,
                 IsParlayPopUp = true,
                 IsPopUp = true,
