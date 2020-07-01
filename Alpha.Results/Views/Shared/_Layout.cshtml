@@ -26,5 +26,6 @@
     @Html.Hidden("RootURL", HttpContext.Current.Response.ApplyAppPathModifier("~/"))
     @CN88.Web.Helpers.StaticResources.AssetScripts.Render("/bundles/site-results/default")
     @RenderSection("Scripts", false)
+    @CN88.Web.Helpers.GoogleAnalyticHepler.Render()
 </body>
 </html>
