@@ -9,6 +9,8 @@
     /// </summary>
     public class GetVirtualRacingResultCriteria : CriteriaBase
     {
+        public DateTime MoveBetsDay { get; set; }
+
         public DateTime FromDate { get; set; }
 
         public int LeagueId { get; set; }
