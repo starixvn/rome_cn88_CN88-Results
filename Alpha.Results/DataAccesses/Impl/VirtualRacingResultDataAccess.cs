@@ -52,7 +52,7 @@
                 {
                     while (reader.Read())
                     {
-                        result.Add(BindRacing(reader));
+                        result.Add(BindRacingDetail(reader));
                     }
                 }
             }
@@ -77,10 +77,33 @@
                 Favourite = reader["IsFavor"] != DBNull.Value ? reader["IsFavor"].ToString() : string.Empty,
                 RowCount = reader["rowcount"] != DBNull.Value ? int.Parse(reader["rowcount"].ToString()) : 0,
                 SCROfMatch = GetSRCValue(reader),
-                TFOfMatch = reader["TF"] != DBNull.Value ? reader["TF"].ToString() : string.Empty
+                TFOfMatch = reader["TF"] != DBNull.Value ? reader["TF"].ToString() : string.Empty,
+                Status = reader["Status"] != DBNull.Value ? reader["Status"].ToString() : string.Empty
             };
         }
-        
+
+        private static Racing BindRacingDetail(IDataReader reader)
+        {
+            return new Racing
+            {
+                LeagueId = reader["meetingid"] != DBNull.Value ? int.Parse(reader["meetingid"].ToString()) : 0,
+                EngineId = reader["HorseId"] != DBNull.Value ? reader["HorseId"].ToString() : string.Empty,
+                EngineNo = reader["HorseNo"] != DBNull.Value ? reader["HorseNo"].ToString() : string.Empty,
+                IsFavor = reader["IsFavor"] != DBNull.Value && reader["IsFavor"].ToString().Equals("1"),
+                IsSCR = reader["IsSCR"] != DBNull.Value && reader["IsSCR"].ToString().Equals("1"),
+                Place = reader["place"] != DBNull.Value ? int.Parse(reader["place"].ToString()) : 0,
+                PlaceOdds = reader["placeodds"] != DBNull.Value ? decimal.Parse(reader["placeodds"].ToString()) : 0,
+                WinOdds = reader["odds"] != DBNull.Value ? decimal.Parse(reader["odds"].ToString()) : 0,
+                RaceName = reader["racename"] != DBNull.Value ? int.Parse(reader["racename"].ToString()) : 0,
+                KickOffTime = reader["kickofftime"] != DBNull.Value ? DateTime.Parse(reader["kickofftime"].ToString()) : DateTime.MinValue,
+                Favourite = reader["IsFavor"] != DBNull.Value ? reader["IsFavor"].ToString() : string.Empty,
+                RowCount = reader["rowcount"] != DBNull.Value ? int.Parse(reader["rowcount"].ToString()) : 0,
+                SCROfMatch = GetSRCValue(reader),
+                TFOfMatch = reader["TF"] != DBNull.Value ? reader["TF"].ToString() : string.Empty,
+                Status = reader["OddsStatus"] != DBNull.Value ? reader["OddsStatus"].ToString() : string.Empty
+            };
+        }
+
         private static string GetSRCValue(IDataReader reader)
         {
             if (reader["SCR"] != DBNull.Value)
